@@ -5,42 +5,33 @@
   right: 0
   left: 0
   z-index: 9
-  background: #f5f5f5
+  background: transparent
   will-change: transform
+  color: white
   backface-visibility: hidden
   transform-style: preserve-3d
   &__wrapper
     display: flex
     align-items: center
-    height: 70px
+    padding: 20px
 
   &__logo
     flex: 0 0 auto
-    font-size: 35px
     padding-right: 30px
-
-  &__menu
-    flex: 0 1 auto
-    display: flex
-    align-items: center
-    font-size: 18px
-    margin: 0 auto
-    padding: 0
-    li
-      display: inline-block
-      margin-right: 30px
-    a
-      transition: color .25s $ease
-      &:hover
-        color: tomato
+    font-size: 0
+    .ico
+      font-size: 67px
 
   &__cta
+    display: flex
+    align-items: center
     margin-left: auto
     padding-left: 30px
+  &__buy-btn
+    margin-right: 20px
 
   &__hamburger
-    // display: none
-    padding-left: 20px
+    padding-left: 10px
 
   &.is-fixed
     // should be normalized to -100% scroll at this point

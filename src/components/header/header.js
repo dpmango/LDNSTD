@@ -12,7 +12,7 @@
     init: function(fromPjax) {
       if (!fromPjax) {
         this.getHeaderParams();
-        this.hamburgerClickListener();
+        this.clickListeners();
         this.listenScroll();
         this.listenResize();
       }
@@ -36,13 +36,33 @@
 
       APP.Plugins.ScrollBlock.blockScroll(isOnload);
     },
-    hamburgerClickListener: function() {
+    clickListeners: function() {
       _document.on('click', '[js-hamburger]', function() {
         $(this).toggleClass('is-active');
         $('.mobile-navi').toggleClass('is-active');
 
         APP.Plugins.ScrollBlock.blockScroll();
       });
+
+      // HEADER SEARCH
+      _document
+        .on('click', '.js-header-search-opener', function(e) {
+          var $button = $(this);
+          var $container = $('.js-header-search');
+          if ($container.is('.is-active')) {
+            $container.removeClass('is-active');
+            // $container -- focus out ?
+          } else {
+            $container.addClass('is-active');
+            $container.find('input').focus();
+          }
+        })
+        .on('click', '.js-header-search .header-search__clear', function() {
+          var $container = $('.js-header-search');
+          var $input = $container.find('input');
+          $input.val('');
+          $container.removeClass('is-active');
+        });
     },
     listenScroll: function() {
       _window.on('scroll', this.scrollHeader.bind(this));

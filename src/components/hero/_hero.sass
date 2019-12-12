@@ -1,0 +1,22 @@
+.hero
+  position: relative
+  z-index: 1
+  &__background
+    z-index: 1
+    background-color: $colorBlue
+  &__content
+    position: relative
+    z-index: 2
+    color: white
+    > .container
+      display: flex
+      flex-direction: column
+      justify-content: center
+      min-height: 100vh
+      padding-top: 120px
+      // fold keeper
+      padding-bottom: 180px
+      min-width: 1px
+  &__text
+    .h1-title
+      margin: 0

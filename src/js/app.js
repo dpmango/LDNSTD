@@ -27,7 +27,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
 
     app.onLoadTrigger = function() {
       // APP.Plugins.Preloader.loaded();
-      // APP.Plugins.LazyLoadImages.init();
+      APP.Plugins.LazyLoadImages.init();
     };
 
     app.refresh = function() {
@@ -74,7 +74,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.ScrollReveal.init();
       APP.Plugins.TextareaAutoExpand.init();
       APP.Plugins.Validations.init();
-      APP.Plugins.LegacySupport.fixImages();
+      APP.Plugins.LAYOUT.init();
 
       // APP.Plugins.Ymaps.init();
       // APP.Plugins.Countdown.init();
@@ -84,7 +84,6 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
     // All components from `src/componenets`
     app.initComponents = function(fromPjax) {
       APP.Components.Header.init(fromPjax);
-      APP.Components.Test.init();
     };
 
     return app;
