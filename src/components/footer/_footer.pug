@@ -1,6 +1,116 @@
 // FOOTER :: START
 footer.footer
   .container
-    .footer__wrapper
+    .footer__topbar
+      .row
+        .col-12.col-sm-4.col-lg-2(data-aos="fade-up")
+          a(href="#").navlink
+            .navlink__icon
+              +svgMono('calendar')
+            .navlink__title What’s on
+            .navlink__link
+              span See Events
+              +svgMono('arrow-right')
+        .col-12.col-sm-4.col-lg-2(data-aos="fade-up")
+          a(href="#").navlink
+            .navlink__icon
+              +svgMono('tickets')
+            .navlink__title XXXXX XXXX
+            .navlink__link
+              span Buy Tickets
+              +svgMono('arrow-right')
+        .col-12.col-sm-4.col-lg-2(data-aos="fade-up")
+          a(href="#").navlink
+            .navlink__icon
+              +svgMono('location')
+            .navlink__title Plan your visit
+            .navlink__link
+              span Find out more
+              +svgMono('arrow-right')
+        .col-12.col-sm-4.col-lg-2(data-aos="fade-up")
+          a(href="#").navlink
+            .navlink__icon
+              +svgMono('news')
+            .navlink__title Latest News
+            .navlink__link
+              span See all
+              +svgMono('arrow-right')
+        .col(data-aos="fade-up")
+          .footer__logo
+            +svgMono("logo")
+
+
+    // menu
+    .footer__menu
+      .row
+        .col-12.col-sm-4.col-lg-2(data-aos="fade-up")
+          .footer__menu-title PLAN YOUR VISIT
+          ul.footer__menu-list
+            li
+              a(href="#") Getting here
+            li
+              a(href="#") Visitor info
+            li
+              a(href="#") Eat & drink
+            li
+              a(href="#") Access info
+            li
+              a(href="#") Conditions of entry
+        .col-12.col-sm-4.col-lg-2(data-aos="fade-up")
+          .footer__menu-title STADIUM TOURS
+          ul.footer__menu-list
+            li
+              a(href="#") Match Day
+            li
+              a(href="#") Groups
+            li
+              a(href="#") Schools
+            li
+              a(href="#") Tour Packages
+            li
+              a(href="#") Gift Vouchers
+        .col-12.col-sm-4.col-lg-2(data-aos="fade-up")
+          .footer__menu-title FUNCTIONS
+          ul.footer__menu-list
+            li
+              a(href="#") Function Spaces
+            li
+              a(href="#") Food & Drink
+            li
+              a(href="#") Services
+            li
+              a(href="#") Customize your event
+            li
+              a(href="#") Plan with us
+        .col-12.col-sm-4.col-lg-2(data-aos="fade-up")
+          .footer__menu-title THE STADIUM
+          ul.footer__menu-list
+            li
+              a(href="#") About us
+            li
+              a(href="#") Our Facilities
+            li
+              a(href="#") Operator
+            li
+              a(href="#") Our Partners
+            li
+              a(href="#") Owners
+            li
+              a(href="#") Recruitment
+        .col-12.col-sm-4.col-lg-2(data-aos="fade-up")
+          .footer__menu-title INFORMATION
+          ul.footer__menu-list
+            li
+              a(href="#") Cookies
+            li
+              a(href="#") Terms & Conditions
+            li
+              a(href="#") Privacy
+            li
+              a(href="#") Contact us
+
+    // background elements
+    .footer__triangle-bg
+      include ../../icons/svg-inline/footer-triangle-bg.svg
 
 // FOOTER :: END

@@ -9,9 +9,57 @@
   background-repeat: no-repeat
   background-position: center center
   background-size: cover
-  img, picture
+  img, picture, video
     width: 100%
     height: 100%
     flex: 1 1 auto
     object-fit: cover
     object-position: center center
+
+// navlink
+.navlink
+  display: flex
+  flex-direction: column
+  &__icon
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    color: $colorCyan
+    min-height: 38px
+    font-size: 0
+    transition: transform .25s $ease
+    will-change: transform
+    .ico
+      font-size: 32px
+    .ico-mono
+      &-calendar
+        font-size: 31px
+      &-tickets
+        font-size: 38px
+  &__title
+    font-size: 19px
+    font-weight: 600
+    padding-top: 12px
+    margin-top: auto
+  &__link
+    margin-top: 0.2em
+    display: flex
+    align-items: center
+    color: $colorCyan
+    span
+      display: inline-block
+      margin-right: 10px
+      font-size: 19px
+      font-weight: 600
+    .ico
+      font-size: 12px
+      transition: transform .25s $ease
+      will-change: transform
+
+  &:hover
+    .navlink
+      &__icon
+        transform: translateY(-5px)
+      &__link
+        .ico
+          transform: translateX(5px)

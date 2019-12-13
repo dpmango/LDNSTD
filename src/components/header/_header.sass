@@ -10,10 +10,11 @@
   color: white
   backface-visibility: hidden
   transform-style: preserve-3d
+  transition: background .25s .1s $ease
   &__wrapper
     display: flex
     align-items: center
-    padding: 20px
+    padding: 20px 40px 12px 20px
 
   &__logo
     flex: 0 0 auto
@@ -33,39 +34,43 @@
   &__hamburger
     padding-left: 10px
 
+  // animation part
+  &__buy-btn
+    transition: opacity .25s $ease, transform .25s $ease
+    will-change: transform
+
   &.is-fixed
     // should be normalized to -100% scroll at this point
     position: fixed
-    // visibility: hidden
+    background: $colorBlueBG
     transform: translate3d(0,-100%,0) !important
-    transition: transform .25s $ease
+    transition: transform .25s $ease, background .25s $ease
     .header__wrapper
       padding-top: 10px
-      padding-bottom: 10px
+      padding-bottom: 8px
 
   &.is-fixed-visible
     // visibility: visible
     transform: translate3d(0,0,0) !important
 
   &.is-transitioning
-    transition: transform .25s $ease
+    transition: transform .25s $ease, background .25s $ease
     transform: translate3d(0,-100%,0) !important
 
-
-+r($lg)
+body.is-mnav-active
   .header
-    &__cta
-      display: none
+    background: $colorBlueBG
+    &__buy-btn
+      opacity: 0
+      transform: translate(0,-7px)
+      pointer-events: none
 
-+r($md)
-  .header
-    &__menu
-      display: none
-    &__hamburger
-      margin-left: auto
-      display: block
 
-+r($sm)
-  .header
-    &__logo
-      font-size: 30px
+// +r($lg)
+//   .header
+
+// +r($md)
+//   .header
+
+// +r($sm)
+//   .header

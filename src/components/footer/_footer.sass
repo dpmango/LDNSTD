@@ -1,7 +1,54 @@
 // FOOTER
 .footer
-  background: #f5f5f5
-  &__wrapper
-    display: flex
-    align-items: center
-    height: 100px
+  position: relative
+  padding: 50px 0 70px 0
+  background: $colorBlue
+  color: white
+  &__topbar
+    position: relative
+    z-index: 2
+    margin-bottom: 50px
+    .navlink
+      margin: 10px 0
+  &__menu
+    position: relative
+    z-index: 2
+    margin: 50px 0
+  &__menu-title
+    font-size: 11px
+    font-weight: 600
+    letter-spacing: em(0.42, 11)
+    margin-bottom: 10px
+  &__menu-list
+    margin: 0 -5px
+    padding: 0
+    list-style: none
+    li
+      display: block
+      font-size: 11px
+      font-weight: 600
+      letter-spacing: em(0.42, 11)
+      margin-bottom: 5px
+      &:last-child
+        margin-bottom: 0
+    a
+      display: inline-block
+      padding: 5px
+      color: rgba(white, .6)
+      transition: color .25s $ease
+      &:hover
+        color: white
+
+  &__logo
+    margin-top: 10px
+    margin-left: auto
+    text-align: right
+    font-size: 0
+    .ico
+      font-size: 84px
+  &__triangle-bg
+    position: absolute
+    z-index: 1
+    font-size: 0
+    right: 0
+    bottom: 0
