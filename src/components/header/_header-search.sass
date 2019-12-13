@@ -1,5 +1,4 @@
 .header-search
-  position: relative
   display: flex
   align-items: center
   transition: .25s $ease
@@ -14,12 +13,14 @@
     padding: 12px
     color: white
     cursor: pointer
-    transition: color .25s $ease
+    will-change: transform
+    transition: color .25s $ease, transform .25s $ease
     .ico
       font-size: 24px
     &:hover
       color: rgba(white, .7)
   &__content
+    position: relative
     input
       width: 0
       color: white
@@ -56,3 +57,63 @@
     .header-search__submit
       opacity: 1
       pointer-events: all
+
++r($lg)
+  .header-search
+    &__opener
+      position: relative
+      z-index: 2
+    &__content
+      position: absolute
+      z-index: 1
+      right: 0
+      left: 0
+      top: 0
+      background: #F6F6F6
+      // opacity: 0
+      transform: translate(-100%, 0)
+      pointer-events: none
+      transition: opacity .25s $ease, transform .25s $ease
+      will-change: transform
+      input
+        width: 100% !important
+        // should be about 100px height
+        padding: 40px 70px 40px 20px
+        color: $fontColor
+        &::placeholder
+          color: #ABADAF
+    &__submit
+      display: none
+    &.is-active
+      margin-right: 0
+      input
+        padding-left: 20px
+        padding-right: 80px
+      .header-search
+        &__content
+          opacity: 1
+          pointer-events: all
+          transform: none
+        &__opener
+          color: $fontColor
+          transform: translate(58px,0)
+          &:hover
+            color: $colorCyan
+
++r($sm)
+  .header-search
+    &__content
+      input
+        font-size: 13px
+        padding: 28px 60px 28px 20px
+    &__opener
+      padding: 7px
+      .ico
+        font-size: 20px
+    &.is-active
+      input
+        padding-left: 15px
+        padding-right: 60px
+      .header-search
+        &__opener
+          transform: translate(40px,0)

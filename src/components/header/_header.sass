@@ -18,7 +18,7 @@
 
   &__logo
     flex: 0 0 auto
-    padding-right: 30px
+    padding-right: 10px
     font-size: 0
     .ico
       font-size: 67px
@@ -71,8 +71,14 @@ body.is-mnav-active
 // +r($lg)
 //   .header
 
-// +r($md)
-//   .header
-
-// +r($sm)
-//   .header
++r($sm)
+  .header
+    &__wrapper
+      padding: 13px 15px 8px 15px
+    &__logo
+      .ico
+        font-size: 47px
+    &__hamburger
+      padding-left: 0
+    &__buy-btn
+      margin-right: 10px

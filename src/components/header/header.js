@@ -49,19 +49,30 @@
         .on('click', '.js-header-search-opener', function(e) {
           var $button = $(this);
           var $container = $('.js-header-search');
-          if ($container.is('.is-active')) {
-            $container.removeClass('is-active');
-            // $container -- focus out ?
+
+          if (window.innerWidth < 992) {
+            // when in mobile view - opener acts as submit button
+            if ($container.is('.is-active')) {
+              // send form
+              $container.submit();
+            } else {
+              $container.addClass('is-active');
+              $container.find('input').focus();
+            }
           } else {
-            $container.addClass('is-active');
-            $container.find('input').focus();
+            // desktop logic
+            if ($container.is('.is-active')) {
+              $container.removeClass('is-active');
+            } else {
+              $container.addClass('is-active');
+              $container.find('input').focus();
+            }
           }
         })
-        .on('click', '.js-header-search .header-search__clear', function() {
-          var $container = $('.js-header-search');
-          var $input = $container.find('input');
-          $input.val('');
-          $container.removeClass('is-active');
+        .on('click', function(e) {
+          if ($(e.target).closest('.js-header-search').length === 0) {
+            $('.js-header-search').removeClass('is-active');
+          }
         })
 
         // MOBILE NAVI
