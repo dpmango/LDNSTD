@@ -3,5 +3,21 @@ ProjectTitle: LDNSTD
 PageList:
   - file: homepage.html
     ready: 30
-  - file: page.html
+  - file: whatson.html
+    ready: 0
+  - file: event.html
+    ready: 0
+  - file: news.html
+    ready: 0
+  - file: article.html
+    ready: 0
+  - file: getting-here.html
+    ready: 0
+  - file: eat-drink.html
+    ready: 0
+  - file: match-day.html
+    ready: 0
+  - file: book-tour.html
+    ready: 0
+  - file: functions.html
     ready: 0
