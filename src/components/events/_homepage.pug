@@ -12,3 +12,25 @@
               +svgMono('arrow-right')
     .events__content
       .events__slider
+        .swiper-container.swiper-bullets.swiper-arrows.js-swiper-events
+          .swiper-wrapper
+            each slide in [1,2]
+              // slide
+              .swiper-slide
+                .event
+                  .event__background.background-cover-ofit
+                    img(src='img/event_1.jpg' srcset='img/event_1@2x.jpg 2x')
+                  .event__content
+              // slide
+              .swiper-slide
+                .event
+                  .event__background.background-cover-ofit
+                    img(src='img/event_2.jpg' srcset='img/event_2@2x.jpg 2x')
+                  .event__content
+
+          .container-l__inner
+            .swiper-pagination
+          .swiper-arrows__container
+            .swiper-arrows__wrapper
+              .swiper-prev <
+              .swiper-next >

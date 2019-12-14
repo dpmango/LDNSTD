@@ -26,33 +26,27 @@
       _window.on('resize', debounce(this.initResponsiveSwipers.bind(this), 200));
     },
     initSwipers: function() {
-      // EXAMPLE SWIPER
-      new Swiper('[js-slider]', {
-        wrapperClass: 'swiper-wrapper',
-        slideClass: 'example-slide',
-        direction: 'horizontal',
-        loop: false,
+      // SWIPER EVENTS
+      new Swiper('.js-swiper-events', {
+        loop: true,
         watchOverflow: true,
         setWrapperSize: false,
         spaceBetween: 0,
         slidesPerView: 'auto',
-        // loop: true,
         normalizeSlideIndex: true,
-        // centeredSlides: true,
-        freeMode: true,
-        // effect: 'fade',
-        autoplay: {
-          delay: 5000,
+        // freeMode: true,
+        // freeModeSticky: true,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+        pagination: {
+          el: '.swiper-pagination',
+          // dynamicBullets: true,
+          clickable: true,
         },
         navigation: {
-          nextEl: '.example-next',
-          prevEl: '.example-prev',
-        },
-        breakpoints: {
-          // when window width is <= 992px
-          992: {
-            autoHeight: true,
-          },
+          nextEl: '.swiper-next',
+          prevEl: '.swiper-prev',
         },
       });
     },

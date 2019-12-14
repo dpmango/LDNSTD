@@ -1,0 +1,44 @@
+// BULLETS
+.swiper-bullets
+  .swiper-pagination
+    padding: 50px 0
+    display: flex
+    align-items: center
+    justify-content: center
+
+  .swiper-pagination-bullet
+    size: 12px
+    border-radius: 50%
+    margin-right: 10px
+    background: #DBE2E3
+    &:last-child
+      margin-right: 0
+  .swiper-pagination-bullet-active
+    background: $colorCyan
+
+// ARROWS
+.swiper-arrows
+  &__container
+    position: absolute
+    z-index: 2
+    top: 0
+    left: 0
+    width: 100%
+    max-width: 1200px
+    pointer-events: none
+  &__wrapper
+    display: flex
+
+  .swiper-prev, .swiper-next
+    background: white
+    padding: 20px
+    pointer-events: all
+  .swiper-prev
+    // left: 0
+  .swiper-next
+    margin-left: auto
+
++r(1300)
+  .swiper-arrows
+    &__container
+      max-width: 90%

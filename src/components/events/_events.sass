@@ -3,6 +3,22 @@
   position: relative
   z-index: 2
   &__slider
-    min-height: 500px
-    background: $colorGrayBG
-    outline: 1px solid red
+    .swiper-slide
+      max-width: 1200px
+
++r(1300)
+  .events
+    &__slider
+      .swiper-slide
+        max-width: 90%
+
+// SIGNLE EVENT
+.event
+  position: relative
+  &__background
+    position: absolute
+    z-index: 1
+  &__content
+    position: relative
+    z-index: 2
+    min-height: 600px
