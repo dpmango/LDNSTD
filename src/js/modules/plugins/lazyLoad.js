@@ -39,6 +39,10 @@
         },
         onFinishedAll: function() {
           APP.Plugins.LegacySupport.fixImages();
+          APP.Plugins.LAYOUT.applyLayout();
+          setTimeout(function() {
+            APP.Plugins.LAYOUT.applyLayout();
+          }, 100);
           AOS.refresh();
         },
       });

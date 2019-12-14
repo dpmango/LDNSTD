@@ -2,7 +2,7 @@ ProjectTitle: LDNSTD
 
 PageList:
   - file: homepage.html
-    ready: 30
+    ready: 40
   - file: whatson.html
     ready: 0
   - file: event.html

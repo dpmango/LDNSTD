@@ -1,6 +1,7 @@
 // FOOTER
 .footer
   position: relative
+  z-index: 5
   padding: 40px 0 100px 0
   background: $colorBlue
   color: white
@@ -107,6 +108,10 @@
     &__logo
       .ico
         font-size: 53px
-
     &__triangle-bg
       display: none
+
++rmin(576)
+  .footer
+    &__menu-list
+      display: block !important

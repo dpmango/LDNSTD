@@ -11,14 +11,22 @@
 //   font-weight: 700
 //   letter-spacing: em(-.33, 48)
 
-// .h3-title
-//   font-size: 28px
-//   letter-spacing: em(-0.17, 28)
-//   font-weight: 700
+.h3-title
+  font-size: 35px
+  font-weight: 700
+
+.h5-title
+  font-size: 19px
+  font-weight: 600
+  letter-spacing: em(-0.14, 19)
 
 // paragraphs
 .p-main
   font-size: 18px
+
+.p-reg
+  font-size: 15px
+  line-height: 1.53
 
 .p-main
   margin: 0
@@ -26,14 +34,21 @@
 p + p
   margin-top: 1em
 
++r($xl)
+  .h1-title
+    font-size: 86px
 
 +r($lg)
   .h1-title
     font-size: 72px
 
++r($md)
+  .h1-title
+    font-size: 52px
+
 +r($sm)
   .h1-title
-    font-size: 36px
+    font-size: 40px
 
 
 // little inline helpers

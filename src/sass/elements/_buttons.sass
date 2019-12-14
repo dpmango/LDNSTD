@@ -19,20 +19,25 @@ button
     display: block
     width: 100%
 
-  &-example
-    // please use paddings instead of line-height to control btn height
-    background: $colorPrimary
-    font-size: 20px
-    padding: 15px 30px
-    color: white
-    transition: .25s $ease
-    transform-origin: center bottom
-    box-shadow: none
-    will-change: box-shadow, transform
+  &-primary
+    display: inline-flex
+    align-items: center
+    font-size: 21px
+    font-weight: 600
+    padding: 17px 32px
+    border-width: 2px
+    border-style: solid
+    span
+      display: inline-block
+      margin-right: 0.5em
+    .ico
+      font-size: 14px
+      transform: translate(0, 1px)
+      will-change: transform
+      transition: transform .25s $ease
     &:hover
-      transform: scale(1.05) translateY(-5px)
-      background: rgba($colorPrimary, .9)
-      box-shadow: 0 15px 10px -15px rgba($fontColor, .4)
+      .ico
+        transform: translate(5px, 1px)
 
   &-rounded
     font-size: 13px
@@ -47,3 +52,10 @@ button
     +r($sm)
       font-size: 9px
       border-width: 1px
+
+  &-white
+    color: white
+    border-color: white
+    &:hover
+      background: white
+      color: $fontColor

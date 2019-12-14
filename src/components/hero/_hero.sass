@@ -6,7 +6,7 @@
     background-color: $colorBlue
   &__content
     position: relative
-    z-index: 2
+    z-index: 3
     color: white
     > .container
       display: flex
@@ -15,8 +15,30 @@
       min-height: 100vh
       padding-top: 120px
       // fold keeper
-      padding-bottom: 180px
+      padding-bottom: 120px
       min-width: 1px
   &__text
     .h1-title
-      margin: 0
+      margin: 0 0 40px
+
+  &--section-fold
+    .hero__content > .container
+      padding-bottom: 180px
+
+  &--bottom-gradient
+    &::after
+      display: inline-block
+      content: ' '
+      position: absolute
+      z-index: 2
+      bottom: 0
+      left: 0
+      right: 0
+      height: 50vh
+      background: linear-gradient(180deg, rgba(19,66,115,0.00) 0%, rgba(0,0,0,0.85) 21%)
+    .hero__content > .container
+      min-height: 125vh
+      padding-bottom: calc(25vh + 120px)
+    &.hero--section-fold
+      .hero__content > .container
+        padding-bottom: calc(25vh + 180px)

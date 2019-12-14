@@ -96,7 +96,36 @@
       .ico
         font-size: 10px
 
-+rmin(576)
-  .footer
-    &__menu-list
-      display: block !important
+// SOCIALS LIST
+.socials-list
+  display: flex
+  padding: 0
+  margin: 0 -5px
+  list-style: none
+  li
+    flex: 0 0 auto
+    margin-right: 10px
+    display: inline-block
+    &:last-child
+      margin-right: 0
+  a
+    display: inline-block
+    padding: 5px
+    font-size: 0
+    transition: opacity .25s $ease
+    &:hover
+      opacity: 0.7
+
+  .ico
+    font-size: 20px
+    &-social
+      &-facebook
+        font-size: 24px
+      &-twitter
+        font-size: 20px
+      &-youtube
+        font-size: 17px
+      &-instagram
+        font-size: 24px
+      &-linkedin
+        font-size: 22px
