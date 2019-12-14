@@ -40,7 +40,7 @@
       position: relative
       display: block
       padding: 10px 30px 10px 10px
-      transition: .25s $ease
+      transition: color .25s $ease
       &:hover
         color: $colorCyan
     li.has-ul
@@ -128,3 +128,74 @@ body.is-mnav-active
   .mnav
     pointer-events: all
     transform: translate3d(0,0,0)
+
++r($lg)
+  .mnav
+    &__menu
+      padding: 0px 20px 0 0px
+      li
+        font-size: 28px
+      ul
+        padding: 5px 10px 0 10px
+        li
+          font-size: 23px
+    &__authmenu
+      margin: 40px 0 0
+      padding: 0
+      li
+        font-size: 22px
+
++r($md)
+  .mnav
+    &__scroller
+      padding-left: 25px
+      padding-right: 25px
+
+    &__menu
+      padding-right: 10px
+      li
+        font-size: 22px
+      ul
+        padding: 3px 10px 0 10px
+        li
+          font-size: 19px
+      li.has-ul
+        a
+          &::after
+            size: 10px 16px
+    &__authmenu
+      margin: 40px 0 0
+      padding: 0
+      li
+        font-size: 18px
+
++r($sm)
+  .mnav
+    &__scroller
+      padding: 90px 10px 40px
+    &__container
+      margin: 0
+    &__menu
+      padding-right: 12px
+      li
+        font-size: 15px
+        margin-bottom: 3px
+      a
+        padding: 5px 15px 5px 5px
+      li.has-ul
+        a
+          &::after
+            right: 0
+            size: 6px 10px
+      ul
+        padding: 2px 0px 0 5px
+        li
+          font-size: 13px
+          margin-bottom: 6px
+    &__authmenu
+      margin: 30px 0 0
+      padding: 0
+      li
+        font-size: 13px
+      a
+        padding: 5px
