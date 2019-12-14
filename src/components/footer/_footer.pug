@@ -3,39 +3,43 @@ footer.footer
   .container
     .footer__topbar
       .row
-        .col-12.col-sm-4.col-lg-2(data-aos="fade-up")
+        .col-12.col-sm-6.col-lg-2(data-aos="fade-up")
           a(href="#").navlink
             .navlink__icon
               +svgMono('calendar')
-            .navlink__title What’s on
-            .navlink__link
-              span See Events
-              +svgMono('arrow-right')
-        .col-12.col-sm-4.col-lg-2(data-aos="fade-up")
+            .navlink__content
+              .navlink__title What’s on
+              .navlink__link
+                span See Events
+                +svgMono('arrow-right')
+        .col-12.col-sm-6.col-lg-2(data-aos="fade-up")
           a(href="#").navlink
             .navlink__icon
               +svgMono('tickets')
-            .navlink__title XXXXX XXXX
-            .navlink__link
-              span Buy Tickets
-              +svgMono('arrow-right')
-        .col-12.col-sm-4.col-lg-2(data-aos="fade-up")
+            .navlink__content
+              .navlink__title XXXXX XXXX
+              .navlink__link
+                span Buy Tickets
+                +svgMono('arrow-right')
+        .col-12.col-sm-6.col-lg-2(data-aos="fade-up")
           a(href="#").navlink
             .navlink__icon
               +svgMono('location')
-            .navlink__title Plan your visit
-            .navlink__link
-              span Find out more
-              +svgMono('arrow-right')
-        .col-12.col-sm-4.col-lg-2(data-aos="fade-up")
+            .navlink__content
+              .navlink__title Plan your visit
+              .navlink__link
+                span Find out more
+                +svgMono('arrow-right')
+        .col-12.col-sm-6.col-lg-2(data-aos="fade-up")
           a(href="#").navlink
             .navlink__icon
               +svgMono('news')
-            .navlink__title Latest News
-            .navlink__link
-              span See all
-              +svgMono('arrow-right')
-        .col(data-aos="fade-up")
+            .navlink__content
+              .navlink__title Latest News
+              .navlink__link
+                span See all
+                +svgMono('arrow-right')
+        .col(data-aos="fade-up" js-teleport data-teleport-to="footer-logo" data-teleport-condition="<992")
           .footer__logo
             +svgMono("logo")
 
@@ -108,6 +112,9 @@ footer.footer
               a(href="#") Privacy
             li
               a(href="#") Contact us
+
+    // footer logo teleport
+    div(data-teleport-target="footer-logo")
 
     // background elements
     .footer__triangle-bg

@@ -36,11 +36,12 @@
         font-size: 31px
       &-tickets
         font-size: 38px
+  &__content
+    padding-top: 12px
+    margin-top: auto
   &__title
     font-size: 19px
     font-weight: 600
-    padding-top: 12px
-    margin-top: auto
   &__link
     margin-top: 0.2em
     display: flex
@@ -55,7 +56,6 @@
       font-size: 12px
       transition: transform .25s $ease
       will-change: transform
-
   &:hover
     .navlink
       &__icon
@@ -63,3 +63,35 @@
       &__link
         .ico
           transform: translateX(5px)
+
++r($lg)
+  .navlink
+    flex-direction: row
+    &__icon
+      display: block
+      flex: 0 0 32px
+      padding-top: 3px
+    &__content
+      padding-top: 0
+      margin-top: 0
+      padding-left: 16px
+
++r($sm)
+  .navlink
+    &__icon
+      flex: 0 0 24px
+      .ico
+        font-size: 24px
+      .ico-mono
+        &-calendar
+          font-size: 22px
+        &-tickets
+          font-size: 24px
+    &__title
+      font-size: 13px
+    &__link
+      span
+        font-size: 13px
+        margin-right: 5px
+      .ico
+        font-size: 10px
