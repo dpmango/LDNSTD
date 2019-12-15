@@ -1,6 +1,42 @@
 // ADD VISIT
 .add-visit
+  position: relative
+  z-index: 2
   background: $colorGrayBG
+  &::before
+    display: inline-block
+    content: ' '
+    position: absolute
+    right: 0
+    top: 0
+    +arr(230, 353, $colorRed, tr)
+  &__slider
+    .swiper-container
+      overflow: visible
+    .swiper-slide
+      max-width: 930px
+
++r(1300)
+  .add-visit
+    &__slider
+      .swiper-slide
+        max-width: 80%
+
+// SIGNLE EVENT
+.visit
+  position: relative
+  transition: transform .4s ease-in
+  will-change: transform
+  &__background
+    position: absolute
+    z-index: 1
   &__content
-    min-height: 400px
-    background: $colorYellow
+    position: relative
+    z-index: 2
+    min-height: 720px
+
+.swiper-slide-active
+  z-index: 3
+  .visit
+    transform: scale(1.1)
+    transform-origin: center bottom

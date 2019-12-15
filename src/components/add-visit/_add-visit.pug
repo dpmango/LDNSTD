@@ -2,7 +2,7 @@
 .add-visit.sec-pt-120
   .container-l
     // section header
-    .section-header.section-header--white(data-aos="fade")
+    .section-header.section-header--pb120.section-header--white(data-aos="fade")
       .container-l__inner
         .section-header__wrapper
           .section-header__name Add to your visit
@@ -12,3 +12,27 @@
               +svgMono('arrow-right')
   .add-visit__content
     .add-visit__slider
+      .swiper-container.swiper-bullets.swiper-arrows.swiper-arrows--centrify.js-swiper-add-visit
+        .swiper-wrapper
+          each slide in [1,2]
+            // slide
+            .swiper-slide
+              .visit
+                .visit__background.background-cover-ofit
+                  img(src='img/event_1.jpg' srcset='img/event_1@2x.jpg 2x')
+                .visit__content
+            // slide
+            .swiper-slide
+              .visit
+                .visit__background.background-cover-ofit
+                  img(src='img/event_2.jpg' srcset='img/event_2@2x.jpg 2x')
+                .visit__content
+
+        .container-l__inner
+          .swiper-pagination
+        .swiper-arrows__container
+          .swiper-arrows__wrapper
+            .swiper-prev
+              +svgMono('arrow-right')
+            .swiper-next
+              +svgMono('arrow-right')

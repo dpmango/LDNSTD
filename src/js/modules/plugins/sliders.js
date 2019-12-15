@@ -46,6 +46,26 @@
           prevEl: '.swiper-prev',
         },
       });
+
+      // SWIPER ADD VISIT
+      new Swiper('.js-swiper-add-visit', {
+        loop: true,
+        watchOverflow: true,
+        setWrapperSize: false,
+        spaceBetween: 0,
+        slidesPerView: 'auto',
+        // normalizeSlideIndex: true,
+        centeredSlides: true,
+        pagination: {
+          el: '.swiper-pagination',
+          // dynamicBullets: true,
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-next',
+          prevEl: '.swiper-prev',
+        },
+      });
     },
 
     initResponsiveSwipers: function() {
