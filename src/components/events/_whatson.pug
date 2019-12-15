@@ -1,0 +1,124 @@
+include ../breadcrumbs/_breadcrumbs
+
+// EVENTS
+.events.sec-mt-fold-t
+  .container-l
+    // section header
+    .section-header.section-header--titled(data-aos="fade")
+      .container-l__inner
+        .section-header__breadcrumbs
+          +breadcrumbs(['Home', 'What’s on', 'Sports'])
+        h1.h1-title.section-header__title What’s on
+
+// EVENTS INNER
+.events__inner
+  .container-l
+    // events filter
+    .events-filter.js-events-filter
+      a(href="#").events-filter__element
+        span All Events
+      a(href="#").events-filter__element.is-active
+        span Sports
+      a(href="#").events-filter__element
+        span Music
+      a(href="#").events-filter__element
+        span Stadium
+      a(href="#").events-filter__element
+        span Sort by Month
+
+  // EVENTS LIST
+  .events-list
+    .container
+      .events-list__head
+        .events-list__head-name There are <span>18</span> upcoming events
+        .events-list__head-cta
+          a(href="#").btn.btn-primary See all West Ham Fixtures
+
+      // EVENTS GRID
+      .events-list__grid
+        mixin eventCard_1
+          // event card
+          .event-card
+            .event-card__image
+              .scaler(style="padding-bottom: "+ (251/370) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_1.jpg)")
+                img(js-lazy data-src='img/event_card_1.jpg' data-srcset='img/event_card_1@2x.jpg 2x')
+            .event-card__date
+              span.event-card__date-day 20
+              span.event-card__date-month Sept
+            .event-card__content(data-aos="fade")
+              .event-card__timestamp 30 November 2019 <br/>Friday – 8:30pm
+              .event-card__name Guns ’n’ Roses <br/>World Tour 2020
+            .event-card__cta(data-aos="fade")
+              a(href="#").event-card__book Book now
+              a(href="#").event-card__more More info
+        mixin eventCard_2
+          // event card
+          .event-card
+            .event-card__image
+              .scaler(style="padding-bottom: "+ (251/370) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_2.jpg)")
+                img(js-lazy data-src='img/event_card_2.jpg' data-srcset='img/event_card_2@2x.jpg 2x')
+            .event-card__date
+              span.event-card__date-month Nov
+            .event-card__content(data-aos="fade")
+              .event-card__timestamp Throughout November<br/>Check for dates
+              .event-card__name Stadium Tour <br/>Experiences
+            .event-card__cta(data-aos="fade")
+              a(href="#").event-card__book Book now
+              a(href="#").event-card__more More info
+        mixin eventCard_3
+          // event card
+          .event-card
+            .event-card__image
+              .scaler(style="padding-bottom: "+ (251/370) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_3.jpg)")
+                img(js-lazy data-src='img/event_card_3.jpg' data-srcset='img/event_card_3@2x.jpg 2x')
+            .event-card__date
+              span.event-card__date-day 27
+              span.event-card__date-month Sept
+            .event-card__content(data-aos="fade")
+              .event-card__timestamp 30 November 2019<br/>Friday – 8:30pm
+              .event-card__name Saracens vs<br/>Leicester
+            .event-card__cta(data-aos="fade")
+              a(href="#").event-card__book Book now
+              a(href="#").event-card__more More info
+        mixin eventCard_4
+          // event card
+          .event-card
+            .event-card__image
+              .scaler(style="padding-bottom: "+ (251/370) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_4.jpg)")
+                img(js-lazy data-src='img/event_card_4.jpg' data-srcset='img/event_card_4@2x.jpg 2x')
+            .event-card__date
+              span.event-card__date-month Nov
+            .event-card__content(data-aos="fade")
+              .event-card__timestamp Throughout November<br/>Check for dates
+              .event-card__name Stadium Tour <br/>Experiences
+            .event-card__cta(data-aos="fade")
+              a(href="#").event-card__book Book now
+              a(href="#").event-card__more More info
+
+        .row
+          .col-12.col-md-6.col-lg-4
+            .event-card-date
+              .event-card-date__title November <br/> 2019
+          .col-12.col-md-6.col-lg-4
+            +eventCard_1
+          .col-12.col-md-6.col-lg-4
+            +eventCard_2
+          .col-12.col-md-6.col-lg-4
+            +eventCard_3
+          .col-12.col-md-6.col-lg-4
+            +eventCard_1
+          .col-12.col-md-6.col-lg-4
+            +eventCard_4
+          .col-12.col-md-6.col-lg-4
+            +eventCard_4
+          .col-12.col-md-6.col-lg-4
+            +eventCard_3
+          .col-12.col-md-6.col-lg-4
+            .event-card-date
+              .event-card-date__title December <br/> 2019
+          .col-12.col-md-6.col-lg-4
+            +eventCard_3
+          .col-12.col-md-6.col-lg-4
+            +eventCard_1
+          .col-12.col-md-6.col-lg-4
+            +eventCard_4

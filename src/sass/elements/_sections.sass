@@ -5,9 +5,21 @@
   color: white
   &--pb120
     padding-bottom: 120px
+  &--titled
+    background: rgba(#134273, .9)
+    padding: 33px 0 60px
   &__wrapper
     display: flex
     align-items: center
+  &__title
+    margin: 0
+    font-family: $baseFont
+    font-weight: 800
+    line-height: 1
+    letter-spacing: em(-2, 100)
+    text-transform: none
+  &__breadcrumbs
+    margin-bottom: 35px
   &__name
     font-size: 35px
     font-weight: 800
@@ -40,3 +52,6 @@
 
 .sec-mt-fold
   margin-top: calc(-25vh - 160px)
+
+.sec-mt-fold-t
+  margin-top: -260px

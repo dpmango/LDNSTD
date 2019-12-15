@@ -73,15 +73,13 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.Validations.init();
       APP.Plugins.LAYOUT.init();
       APP.Plugins.Gmaps.init();
-
-      // APP.Plugins.Countdown.init();
-      // APP.Plugins.FooterReveal.init();
     };
 
     // All components from `src/componenets`
     app.initComponents = function(fromPjax) {
       APP.Components.Header.init(fromPjax);
       APP.Components.Footer.init(fromPjax);
+      APP.Components.Events.init(fromPjax);
     };
 
     return app;
