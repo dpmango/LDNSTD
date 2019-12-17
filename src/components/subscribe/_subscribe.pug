@@ -7,24 +7,28 @@
           .col-12.col-md-6(data-aos="fade-up")
             .subscribe__title.h3-title Stay in touch
             p.subscribe__description.p-reg Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
+            form.subscribe__form(action="#" js-validate-form)
+              input(placeholder="Email address" type="email" required)
+              button(type="submit") Submit
 
           .col.col-md-6(data-aos="fade-up")
             .subscribe__socials
-              .h5-title.subscribe__socials-title Follow us
+              .subscribe__socials-wrapper
+                .h5-title.subscribe__socials-title Follow us
 
-              .subscribe__socials-list.socials-list
-                li
-                  a(href="#")
-                    +svgMono('social-facebook')
-                li
-                  a(href="#")
-                    +svgMono('social-twitter')
-                li
-                  a(href="#")
-                    +svgMono('social-youtube')
-                li
-                  a(href="#")
-                    +svgMono('social-instagram')
-                li
-                  a(href="#")
-                    +svgMono('social-linkedin')
+                .subscribe__socials-list.socials-list
+                  li
+                    a(href="#")
+                      +svgMono('social-facebook')
+                  li
+                    a(href="#")
+                      +svgMono('social-twitter')
+                  li
+                    a(href="#")
+                      +svgMono('social-youtube')
+                  li
+                    a(href="#")
+                      +svgMono('social-instagram')
+                  li
+                    a(href="#")
+                      +svgMono('social-linkedin')

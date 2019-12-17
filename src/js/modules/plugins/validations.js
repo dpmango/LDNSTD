@@ -6,7 +6,6 @@
 (function($, APP) {
   APP.Plugins.Validations = {
     init: function() {
-      this.localize();
       this.validateFormsConstructor();
       this.validateFormsCustom();
     },
@@ -60,49 +59,8 @@
           },
         });
       },
-      masks: {
-        phone: {
-          required: true,
-          normalizer: function(value) {
-            var PHONE_MASK = '+X (XXX) XXX-XXXX';
-            if (!value || value === PHONE_MASK) {
-              return value;
-            } else {
-              return value.replace(/[^\d]/g, '');
-            }
-          },
-          minlength: 11,
-          digits: true,
-        },
-      },
     },
-    localize: function() {
-      /*
-       * Translated default messages for the jQuery validation plugin.
-       * Locale: RU (Russian; русский язык)
-       */
-      $.extend($.validator.messages, {
-        required: 'Это поле необходимо заполнить.',
-        remote: 'Пожалуйста, введите правильное значение.',
-        email: 'Пожалуйста, введите корректный адрес электронной почты.',
-        url: 'Пожалуйста, введите корректный URL.',
-        date: 'Пожалуйста, введите корректную дату.',
-        dateISO: 'Пожалуйста, введите корректную дату в формате ISO.',
-        number: 'Пожалуйста, введите число.',
-        digits: 'Пожалуйста, вводите только цифры.',
-        creditcard: 'Пожалуйста, введите правильный номер кредитной карты.',
-        equalTo: 'Пожалуйста, введите такое же значение ещё раз.',
-        extension: 'Пожалуйста, выберите файл с правильным расширением.',
-        maxlength: $.validator.format('Пожалуйста, введите не больше {0} символов.'),
-        minlength: $.validator.format('Пожалуйста, введите не меньше {0} символов.'),
-        rangelength: $.validator.format(
-          'Пожалуйста, введите значение длиной от {0} до {1} символов.'
-        ),
-        range: $.validator.format('Пожалуйста, введите число от {0} до {1}.'),
-        max: $.validator.format('Пожалуйста, введите число, меньшее или равное {0}.'),
-        min: $.validator.format('Пожалуйста, введите число, большее или равное {0}.'),
-      });
-    },
+
     validateFormsConstructor: function() {
       var _this = this;
 
@@ -123,16 +81,11 @@
               required: true,
               email: true,
             },
-            phone: _this.data.masks.phone,
           },
           messages: {
             email: {
-              required: 'Заполните это поле',
-              email: 'Формат email неверен',
-            },
-            phone: {
-              required: 'Заполните это поле',
-              minlength: 'Введите корректный телефон',
+              required: 'This field is required',
+              email: 'E-mail is not valid',
             },
           },
         };
@@ -149,15 +102,6 @@
         highlight: _this.data.validateHighlight,
         unhighlight: _this.data.validateUnhighlight,
         submitHandler: _this.data.validateSubmitHandler,
-        rules: {
-          phone: _this.data.masks.phone,
-        },
-        messages: {
-          phone: {
-            required: 'Заполните это поле',
-            minlength: 'Введите корректный телефон',
-          },
-        },
       };
 
       // call/init
