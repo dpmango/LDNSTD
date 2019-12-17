@@ -4,7 +4,7 @@ PageList:
   - file: homepage.html
     ready: 40
   - file: whatson.html
-    ready: 50
+    ready: 80
   - file: event.html
     ready: 0
   - file: news.html

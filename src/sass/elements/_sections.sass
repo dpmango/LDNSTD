@@ -13,6 +13,7 @@
     align-items: center
   &__title
     margin: 0
+    font-size: 100px
     font-family: $baseFont
     font-weight: 800
     line-height: 1
@@ -55,3 +56,23 @@
 
 .sec-mt-fold-t
   margin-top: -260px
+
++r($lg)
+  .section-header
+    &__title
+      font-size: 72px
+
+  .sec-mt-fold-t
+    margin-top: -230px
+
++r($sm)
+  .section-header
+    &--titled
+      padding: 15px 0 25px
+    &__title
+      font-size: 29px
+    &__breadcrumbs
+      margin-bottom: 20px
+
+  .sec-mt-fold-t
+    margin-top: -110px
