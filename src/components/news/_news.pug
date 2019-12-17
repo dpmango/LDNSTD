@@ -4,7 +4,7 @@ include ../breadcrumbs/_breadcrumbs
 .news.sec-mt-fold-t
   .container-l
     // section header
-    .section-header.section-header--titled(data-aos="fade")
+    .section-header.section-header--titled(data-aos="fade-left")
       .container-l__inner
         .section-header__breadcrumbs
           +breadcrumbs(['Home', 'Our news'])
@@ -14,11 +14,12 @@ include ../breadcrumbs/_breadcrumbs
 .news__inner
   .container-l
     // news filter
-    .news-filter.js-news-filter
-      a(href="#").news-filter__element
-        span Most recent
-      a(href="#").news-filter__element
-        span All subjects
+    .news-filter
+      .news-filter__links
+        a(href="#").news-filter__element
+          span Most recent
+        a(href="#").news-filter__element
+          span All subjects
       form.news-filter__search(action="#")
         input(placeholder="Search for a News item")
         button(type="submit")
@@ -36,7 +37,7 @@ include ../breadcrumbs/_breadcrumbs
               .news-card__image
                 .scaler(style="padding-bottom: "+ (370/370) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_4.jpg)")
                   img(js-lazy data-src='img/event_card_4.jpg' data-srcset='img/event_card_4@2x.jpg 2x')
-              .news-card__content
+              .news-card__content(data-aos="fade")
                 .news-card__tag Sports
                 .news-card__timestamp 30 November 2019
                 .news-card__title Headline goes here
@@ -50,7 +51,7 @@ include ../breadcrumbs/_breadcrumbs
                 .news-card__image
                   .scaler(js-scaler-mobile data-ar-768="370/370" style="padding-bottom: "+ (251/370) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_4.jpg)")
                     img(js-lazy data-src='img/event_card_4.jpg' data-srcset='img/event_card_4@2x.jpg 2x')
-                .news-card__content
+                .news-card__content(data-aos="fade")
                   .news-card__tag Sports
                   .news-card__timestamp 30 November 2019
                   .news-card__title Headline goes here

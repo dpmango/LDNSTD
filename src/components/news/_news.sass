@@ -6,6 +6,8 @@
     min-height: 400px
     background: $colorCyan
   &__inner
+    position: relative
+    z-index: 2
     background: $colorGrayBG
 
 
@@ -13,11 +15,13 @@
 .news-filter
   background: white
   display: flex
-  overflow-x: auto
+  &__links
+    display: flex
+    flex: 0 0 60%
   &__element
     width: 100%
-    flex: 0 0 20%
-    max-width: 20%
+    flex: 0 0 50%
+    max-width: 50%
     position: relative
     padding: 30px
     font-size: 17px
@@ -48,6 +52,8 @@
       border: 0
       box-shadow: 0
     input
+      display: block
+      width: 100%
       font-size: 15px
       padding: 30px 110px 30px 30px
       font-weight: 500
@@ -62,6 +68,7 @@
       top: 0
       bottom: 0
       right: 0
+      padding: 0
       width: 80px
       font-size: 0
       background: $colorCyan
@@ -73,19 +80,25 @@
         color: white
 
 
-+r($lg)
++r($md)
   .news-filter
+    flex-wrap: wrap
+    &__search
+      order: 1
+      flex: 0 0 100%
+      border-bottom: 1px solid $colorGrayBG
+      input
+        font-size: 13px
+        padding: 22px 90px 22px 15px
+      button
+        width: 60px
+    &__links
+      order: 2
+      flex: 0 0 100%
     &__element
-      padding: 20px 15px
+      padding: 22px 15px
       font-size: 15px
 
-+r($sm)
-  .news-filter
-    &__element
-      width: auto
-      flex-basis: auto
-      max-width: 100%
-      min-width: 130px
 
 // NEWS LIST
 .news-list
