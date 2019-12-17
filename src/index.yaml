@@ -8,7 +8,7 @@ PageList:
   - file: event.html
     ready: 0
   - file: news.html
-    ready: 0
+    ready: 40
   - file: article.html
     ready: 0
   - file: getting-here.html
