@@ -14,9 +14,27 @@
     color: white
   &__text
     .h1-title
+      text-transform: none
       margin: 0 0 40px
-  &__triangle
-    position: absolute
-    z-index: 2
-    top: 0
-    right: 0
+  &--triangle-yellow
+    &::after
+      display: inline-block
+      content: ' '
+      position: absolute
+      top: 0
+      right: 0
+      z-index: 2
+      +arr(200,310,$colorYellow,tr)
+
++r($sm)
+  .banner
+    &__content
+      padding-top: 70px
+      padding-bottom: 30px
+      min-height: 440px
+    &__text
+      .h1-title
+        margin: 0 0 25px
+    &--triangle-yellow
+      &::after
+        +arr(146,224,$colorYellow,tr)
