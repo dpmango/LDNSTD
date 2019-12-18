@@ -12,7 +12,7 @@ PageList:
   - file: article.html
     ready: 50
   - file: getting-here.html
-    ready: 0
+    ready: 50
   - file: eat-drink.html
     ready: 0
   - file: match-day.html

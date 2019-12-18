@@ -1,0 +1,52 @@
+// accardeon
+.accardeon
+  &__element
+    margin-bottom: 2px
+    &:last-child
+      margin-bottom: 0
+    &.is-active
+      .accardeon__toggler
+        &::after
+          transform: translateY(-50%) rotate(180deg)
+  &__toggler
+    position: relative
+    display: flex
+    align-items: center
+    background: $colorGrayBG
+    cursor: pointer
+    &::after
+      display: inline-block
+      content: ' '
+      position: absolute
+      right: 30px
+      top: 50%
+      size: 19px 11px
+      transform: translateY(-50%)
+      background: svg-load('../icons/svg-mono/caret.svg', fill=$colorBlueBG) no-repeat center center
+      background-size: contain
+      transition: transform .25s $ease
+      will-change: transform
+
+  &__icon
+    font-size: 0
+    min-size: 78px
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    background: $colorCyan
+    color: $colorBlueBG
+    .ico
+      font-size: 48px
+
+  &__title
+    font-size: 25px
+    font-weight: 600
+    letter-spacing: em(-0.5, 25)
+    color: $colorBlueBG
+    padding-left: 24px
+
+  &__content
+    display: none
+    padding: 50px 0
+    max-width: 590px

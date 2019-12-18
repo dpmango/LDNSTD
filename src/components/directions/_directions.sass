@@ -1,14 +1,27 @@
 // DIRECTIONS
 .directions
+  position: relative
+  z-index: 2
   &__content
 
   &__nav
     background: $colorBlueBG
     color: white
-    min-height: 240px
+    display: flex
+    overflow: hidden
+  &__nav-element
+    width: 100%
+    flex: 0 0 25%
+    max-width: 25%
+    min-width: 1px
+    min-height: 0
+    border-right: 3px solid white
+    &:last-child
+      border-right: 0
 
   &__map
     position: relative
+    min-height: 600px
   &__map-container
     position: absolute 0
     background: $colorGrayBG
@@ -27,3 +40,59 @@
   &__info
     min-height: 600px
     background: white
+
+// DIRECTION NAVIGATION ELEMENT
+.dirnav
+  display: flex
+  flex-direction: column
+  padding: 45px 70px 65px
+  &__icon
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    color: $colorCyan
+    min-height: 40px
+    font-size: 0
+    transition: transform .25s $ease
+    will-change: transform
+    .ico
+      font-size: 32px
+    .ico-mono
+      &-location
+        font-size: 40px
+      &-seats
+        font-size: 26px
+      &-info
+        font-size: 37px
+      &-food
+        font-size: 40px
+      &-accessbility
+        font-size: 40px
+      &-stadium
+        font-size: 25px
+  &__content
+    padding-top: 20px
+    margin-top: auto
+  &__description
+    margin-top: 25px
+    font-size: 15px
+    font-weight: 600
+  &__link
+    display: flex
+    align-items: center
+    span
+      display: inline-block
+      margin-right: 14px
+      font-size: 23px
+      font-weight: 800
+    .ico
+      font-size: 19px
+      transition: transform .25s $ease
+      will-change: transform
+  &:hover
+    .dirnav
+      &__icon
+        transform: translateY(-5px)
+      &__link
+        .ico
+          transform: translateX(5px)

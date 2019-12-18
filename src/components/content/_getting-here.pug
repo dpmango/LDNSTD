@@ -1,0 +1,49 @@
+// CONTENT
+.content
+  .container
+    // Article
+    article.article
+      .article__text(data-aos="fade-up")
+        .wysiwyg
+          blockquote London Stadium is located in the South of Queen Elizabeth Olympic Park, and benefits from the best transport links in London:
+          p Stratford station is our recommended route for all supporters travelling to and from London Stadium given its capacity.
+          p Once at Stratford station stewards and signs will direct you to the Stadium. The roads between the station and stadium will be closed to traffic for an hour before kick-off to help get you to the ground quickly and safely.
+          p You may not be able to take the walking route that you are used to on non-event days but rest assured that our stewarding team will direct you along the safest route to London Stadium.
+
+// CONTENT
+.content.content--bg-white
+  .content__wrapper
+    .container
+      h2.h2-title.c-blue(data-aos="fade-up") Directions
+
+      .content__accardeon
+        .accardeon.js-content-accardeon
+          each element in [1,2,3,4,5]
+            // accardeon__element
+            .accardeon__element(data-aos="fade-up")
+              .accardeon__toggler
+                .accardeon__icon
+                  +svgMono('train')
+                .accardeon__title By Tube and Train
+
+              .accardeon__content
+                .row
+                  .col-12.col-md-10.offset-md-1
+                    .wysiwyg
+                      blockquote London Stadium is served by 58 trains per hour through Stratford, with services running from the following locations:
+                      p Stratford station (20 minute walk) is served by the following:
+                      ul
+                        li Central & Jubilee lines
+                        li Docklands Light Railway (DLR)
+                        li National Rail services operated by Greater Anglia and C2C
+                        li London Overground
+                      p Stratford international station (20 minute walk) is served by the following:
+                      ul
+                        li Docklands Light Railway (DLR)
+                        li Southeastern High Speed 1 services
+                      p
+                        strong Pudding Mill Lane station (10 minute walk) is served by the District Light Railway (DLR)
+                      p
+                        strong Hackney Wick station (20 minute walk) is served by the London Overground
+                      p For more information regarding train travel to <strong>London Stadium</strong>, visit <a href="#"><strong>Transport For London’s website here</strong></a>.
+
