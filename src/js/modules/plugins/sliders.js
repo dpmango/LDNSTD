@@ -31,7 +31,6 @@
         spaceBetween: 0,
         slidesPerView: 'auto',
         normalizeSlideIndex: true,
-        lazy: true,
         // freeMode: true,
         // freeModeSticky: true,
         // autoplay: {
