@@ -28,6 +28,15 @@
         pointer-events: none
       &:hover
         color: $colorRed
+  &--blue
+    .breadcrumbs__list
+      span, a
+        color: $colorBlueBG
+      a
+        &::after
+          color: $colorBlueBG
+        &:hover
+          color: $colorRed
 
 +r($sm)
   .breadcrumbs

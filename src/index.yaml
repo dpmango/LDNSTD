@@ -10,7 +10,7 @@ PageList:
   - file: news.html
     ready: 80
   - file: article.html
-    ready: 0
+    ready: 50
   - file: getting-here.html
     ready: 0
   - file: eat-drink.html

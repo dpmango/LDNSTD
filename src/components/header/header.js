@@ -155,7 +155,7 @@
 
       var $modifierElement = $('.page')
         .last()
-        .find('[js-header-class]');
+        .find('.js-header-class');
 
       if ($modifierElement.length > 0) {
         this.data.header.container.attr('data-modifier', $modifierElement.data('class'));

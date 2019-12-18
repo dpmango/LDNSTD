@@ -1,6 +1,6 @@
-mixin breadcrumbs(crumbs)
+mixin breadcrumbs(crumbs, modifier)
   // BREADCRUMBS
-  .breadcrumbs
+  .breadcrumbs(class=modifier ? "breadcrumbs--" + modifier : "")
     ul.breadcrumbs__list
       each crumb, index in crumbs
         li
