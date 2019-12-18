@@ -41,11 +41,42 @@
     min-height: 600px
     background: white
 
++r($lg)
+  .directions
+    &__nav
+      flex-wrap: wrap
+    &__nav-element
+      flex-basis: 50%
+      max-width: 50%
+      border-right: 2px solid white
+      border-bottom: 2px solid white
+      &:nth-child(even)
+        border-right: 0
+    &__map
+      min-height: 450px
+    &__info
+      min-height: 450px
+
++r($sm)
+  .directions
+    &__nav-element
+      flex-basis: 100%
+      max-width: 100%
+      border-right: 0
+      border-bottom: 1px solid white
+    &__map
+      min-height: 300px
+
++r($mobile-s)
+  .directions
+    &__map
+      min-height: 220px
+
 // DIRECTION NAVIGATION ELEMENT
 .dirnav
   display: flex
   flex-direction: column
-  padding: 45px 70px 65px
+  padding: 45px 20px 65px 70px
   &__icon
     display: flex
     flex-direction: column
@@ -73,10 +104,6 @@
   &__content
     padding-top: 20px
     margin-top: auto
-  &__description
-    margin-top: 25px
-    font-size: 15px
-    font-weight: 600
   &__link
     display: flex
     align-items: center
@@ -89,6 +116,10 @@
       font-size: 19px
       transition: transform .25s $ease
       will-change: transform
+  &__description
+    margin-top: 25px
+    font-size: 15px
+    font-weight: 600
   &:hover
     .dirnav
       &__icon
@@ -96,3 +127,68 @@
       &__link
         .ico
           transform: translateX(5px)
+
++r($xl)
+  .dirnav
+    padding-left: 40px
+
++r($lg)
+  .dirnav
+    padding: 30px 20px 50px 20px
+    &__link
+      span
+        font-size: 19px
+        margin-right: 10px
+      .ico
+        font-size: 15px
+    &__description
+      margin-top: 15px
+      font-size: 15px
+    &__content
+      padding-top: 15px
+
++r($sm)
+  .dirnav
+    position: relative
+    flex-direction: row
+    padding: 20px 15px
+    &__icon
+      flex: 0 0 40px
+      padding-bottom: 5px
+      .ico
+        font-size: 32px
+      .ico-mono
+        &-location
+          font-size: 32px
+        &-seats
+          font-size: 14px
+        &-info
+          font-size: 32px
+        &-food
+          font-size: 32px
+        &-accessbility
+          font-size: 32px
+        &-stadium
+          font-size: 20px
+    &__content
+      padding-top: 0
+      padding-left: 10px
+      padding-right: 20px
+    &__description
+      font-size: 13px
+      margin-top: 3px
+    &__link
+      span
+        font-size: 17px
+        margin-right: 5px
+      .ico
+        font-size: 16px
+        position: absolute
+        right: 15px
+        top: 50%
+        transform: translateY(-50%)
+    &:hover
+      .dirnav
+        &__link
+          .ico
+            transform: translate(5px, -50%)

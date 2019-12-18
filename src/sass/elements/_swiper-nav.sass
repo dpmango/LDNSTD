@@ -18,6 +18,10 @@
   .swiper-pagination-bullet-active
     background: $colorCyan
 
++r($sm)
+  .swiper-bullets
+    .swiper-pagination
+      padding: 32px 0
 // ARROWS
 .swiper-arrows
   &__container
@@ -60,6 +64,11 @@
       transform: rotate(180deg)
   .swiper-next
     margin-left: auto
+
++r($sm)
+  .swiper-arrows
+    &__container
+      display: none
 
 // swiper animation
 .swiper-aos

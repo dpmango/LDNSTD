@@ -35,11 +35,19 @@
     .ico
       font-size: 12px
       will-change: transform
-      transform: translate(0px, 1px)
+      transform: translate(0px, 0px)
       transition: transform .25s $ease
     &:hover
       .ico
-        transform: translate(5px, 1px)
+        transform: translate(5px, 0px)
+  &__cta-mobile
+    display: none
+    padding: 0 15px
+    margin-bottom: 45px
+    .btn
+      width: 100%
+      .ico
+        margin-left: auto
   &--gray
     background: $colorGrayBG
     color: #134273
@@ -62,18 +70,29 @@
   .section-header
     &__title
       font-size: 72px
+    &__name
+      font-size: 32px
   .sec-mt-fold-t
     margin-top: -230px
 
 
 +r($md)
   .section-header
+    padding: 50px 0 30px
     &--titled
       padding: 25px 0 40px
     &__title
       font-size: 48px
     &__breadcrumbs
       margin-bottom: 30px
+    &__name
+      font-size: 25px
+    &__link
+      font-size: 17px
+      span
+        margin-right: 0.4em
+      .ico
+        font-size: 10px
 
   .sec-mt-fold-t
     margin-top: -175px
@@ -81,12 +100,19 @@
 
 +r($sm)
   .section-header
+    padding: 40px 0 20px
     &--titled
       padding: 15px 0 25px
     &__title
       font-size: 29px
     &__breadcrumbs
       margin-bottom: 20px
+    &__name
+      font-size: 17px
+    &__link
+      display: none
+    &__cta-mobile
+      display: block
 
   .sec-mt-fold-t
     margin-top: -110px

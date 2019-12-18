@@ -8,11 +8,41 @@
   &__wrapper
     padding-top: 100px
     background: white
+    h1, h2, h3, h4, h5, h6
+      &:first-child
+        margin-top: 0
   &__breadcrumbs
     margin-top: 70px
   &__accardeon
     margin: 100px 0 120px
 
++r($lg)
+  .content
+    &__wrapper
+      padding-top: 80px
+    &__breadcrumbs
+      margin-right: 50px
+    &__accardeon
+      margin: 80px 0 90px
+
++r($md)
+  .content
+    &__wrapper
+      padding-top: 60px
+    &__breadcrumbs
+      margin-right: 40px
+    &__accardeon
+      margin: 60px 0 70px
+
+
++r($sm)
+  .content
+    &__wrapper
+      padding-top: 40px
+    &__breadcrumbs
+      margin-right: 30px
+    &__accardeon
+      margin: 35px -15px 50px
 
 // ARTICLE
 .article
@@ -46,6 +76,18 @@
     padding: 10px 20px
     background: $colorBlueBG
     color: white
+
++r($lg)
+  .article
+    margin-top: 50px
+    padding-bottom: 80px
+
++r($sm)
+  .article
+    margin-top: 30px
+    padding-bottom: 50px
+    &__text
+      padding-right: 5px
 
 // wysiwyg
 .wysiwyg
@@ -88,3 +130,16 @@
 
   p + p, blockquote + p, p + blockquote
     margin-top: 1.5em
+  p
+    ul
+      margin-top: 0
+
++r($sm)
+  .wysiwyg
+    blockquote
+      font-size: 19px
+    p
+      font-size: 15px
+    ul
+      li
+        font-size: 15px
