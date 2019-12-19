@@ -66,6 +66,36 @@
           prevEl: '.swiper-prev',
         },
       });
+
+      // SWIPER NEWS CAROUSEL
+      var swiperNews = new Swiper('.js-swiper-news', {
+        wrapperClass: 'swiper-wrapper',
+        loop: true,
+        watchOverflow: true,
+        setWrapperSize: false,
+        spaceBetween: 15,
+        slidesPerView: '1',
+        // normalizeSlideIndex: true,
+        pagination: {
+          el: '.swiper-pagination',
+          // dynamicBullets: true,
+          clickable: true,
+        },
+        breakpoints: {
+          576: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          1100: {
+            spaceBetween: 30,
+            slidesPerView: '3',
+          },
+        },
+        navigation: {
+          nextEl: '.swiper-next',
+          prevEl: '.swiper-prev',
+        },
+      });
     },
 
     initResponsiveSwipers: function() {

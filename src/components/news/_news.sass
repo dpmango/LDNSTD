@@ -2,14 +2,34 @@
 .news
   position: relative
   z-index: 2
+  &--gray-bg
+    background: $colorGrayBG
   &__content
-    min-height: 400px
-    background: $colorCyan
+    background: $colorGrayBG
   &__inner
     position: relative
     z-index: 2
     background: $colorGrayBG
+  &__slider
+    position: relative
+    .swiper-container
+      position: static
+    .swiper-wrapper
+      margin-top: 85px
 
++r($lg)
+  .news
+    &__slider
+      .swiper-wrapper
+        margin-top: 60px
+
++r($sm)
+  .news
+    &__slider
+      .swiper-container
+        overflow: visible
+      .swiper-wrapper
+        margin-top: 20px
 
 // NEWS FILTER
 .news-filter
@@ -190,6 +210,27 @@
         flex: 0 0 50%
         max-width: 50%
 
+  &--slide
+    .news-card
+      &__content
+        padding: 45px 30px
+      &__timestamp
+        font-size: 12px
+      &__tag
+        font-size: 11px
+        min-width: 120px
+        padding: 8px 12px
+      &__title
+        margin-top: 30px
+        font-size: 32px
+        max-width: 270px
+      &__short
+        margin-top: 25px
+        max-width: 250px
+        p
+          font-size: 13px
+
+
 +r($lg)
   .news-card
     margin-bottom: 30px
@@ -236,3 +277,19 @@
       margin-top: 10px
       p
         font-size: 13px
+    &--slide
+      .news-card
+        &__content
+          padding: 40px 20px 30px
+        &__tag
+          font-size: 11px
+          min-width: 120px
+          padding: 8px 12px
+        &__title
+          margin-top: 15px
+          margin-top: 5%
+          font-size: 29px
+        &__short
+          max-width: 220px
+          p
+            font-size: 13px
