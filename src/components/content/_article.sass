@@ -1,0 +1,304 @@
+// ARTICLE
+.article
+  position: relative
+  margin-top: 70px
+  padding-bottom: 100px
+  &--mt0
+    margin-top: 0
+  .col-12
+    position: static
+  &__breadcrumbs
+    margin-top: 45px
+  &__main-image
+    margin-bottom: 70px
+  &__timestamp
+    font-size: 17px
+    font-weight: 600
+    margin-bottom: 40px
+  &__title
+    margin: 40px 0
+    font-size: 60px
+    line-height: 1.17
+    letter-spacing: em(-0.71, 60)
+  &__text
+    max-width: 590px
+  &__tag
+    position: absolute
+    z-index: 2
+    top: 0px
+    right: 0
+    min-width: 180px
+    font-size: 17px
+    font-weight: 600
+    padding: 10px 20px
+    background: $colorBlueBG
+    color: white
+  &__datetime
+    min-size: 80px 100px
+    background: $colorBlueBG
+    color: white
+    display: inline-flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    align-items: center
+  &__datetime-date
+    font-size: 34px
+    font-weight: 600
+  &__datetime-month
+    font-size: 24px
+    font-weight: 600
+  &__cta-section
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    min-height: 100px
+    padding: 15px 0
+    margin-top: 60px
+    border-top: 1px solid #DBE2E3
+    border-bottom: 1px solid #DBE2E3
+    + .article__cta-section
+      margin-top: -1px
+
+  &__cta-section-name
+    padding-right: 10px
+    font-size: 15px
+    font-weight: 600
+    color: $colorBlueBG
+  &__cta-section-content
+    margin-left: auto
+
+  &__metric
+    + .article__metric
+      margin-top: 65px
+
+  &__metric-name
+    font-size: 23px
+    font-weight: 600
+    color: $colorBlueBG
+  &__metric-value
+    margin-top: 30px
+    font-size: 100px
+    letter-spacing: em(-0.67,100)
+    color: $colorRed
+
+  &__buy-btn
+    display: flex
+    align-items: center
+    background: $colorCyan
+    padding: 37px 30px
+    transition: background .25s $ease, color .25s $ease
+    span
+      display: inline-block
+      margin-right: 0.5em
+      font-size: 23px
+      font-weight: 600
+    .ico
+      font-size: 19px
+      transform: translate(0, 0px)
+      will-change: transform
+      transition: transform .25s $ease
+    &:hover
+      background: $colorBlueBG
+      color: white
+      .ico
+        transform: translate(5px, 0px)
+
+
++r($lg)
+  .article
+    margin-top: 50px
+    padding-bottom: 80px
+    &--mt0
+      margin-top: 0
+    &__title
+      font-size: 46px
+    &__datetime
+      min-size: 70px 90px
+    &__datetime-date
+      font-size: 28px
+    &__datetime-month
+      font-size: 20px
+    &__metric
+      + .article__metric
+        margin-top: 45px
+    &__metric-name
+      font-size: 21px
+    &__metric-value
+      margin-top: 25px
+      font-size: 75px
+    &__prices
+      margin-top: 40px
+
++r($md)
+  .article
+    &__breadcrumbs
+      margin-top: 30px
+    &__timestamp
+      font-size: 15px
+      margin-bottom: 25px
+    &__title
+      font-size: 38px
+      margin: 25px 0
+    &__metric
+    &__metric-name
+      font-size: 21px
+    &__metric-value
+      margin-top: 20px
+      font-size: 60px
+    &__buy-btn
+      padding: 28px 20px
+      margin-top: 40px
+      span
+        font-size: 21px
+      .ico
+        font-size: 14px
+
++r($sm)
+  .article
+    margin-top: 30px
+    padding-bottom: 50px
+    &--mt0
+      margin-top: 0
+    &__text
+      padding-right: 5px
+    &__breadcrumbs
+      margin-top: 30px
+    &__timestamp
+      font-size: 13px
+      margin-bottom: 15px
+    &__title
+      font-size: 27px
+      margin: 15px 0
+    &__datetime
+      min-size: 50px 60px
+    &__datetime-date
+      font-size: 21px
+    &__datetime-month
+      font-size: 16px
+    &__cta-section
+      min-height: 80px
+      padding: 15px 15px
+      margin-left: -15px
+      margin-right: -15px
+      margin-top: 30px
+    &__cta-section-name
+      flex: 1 1 100%
+      padding-right: 0px
+      font-size: 15px
+      font-weight: 600
+      color: $colorBlueBG
+    &__cta-section-content
+      margin-left: 0
+      margin-top: 15px
+
+    &__metric
+      + .article__metric
+        margin-top: 25px
+    &__metric-name
+      font-size: 17px
+    &__metric-value
+      margin-top: 15px
+      font-size: 42px
+    &__prices
+      margin-top: 25px
+    &__buy-btn
+      padding: 21px 20px
+      margin-top: 40px
+      span
+        font-size: 15px
+      .ico
+        font-size: 10px
+
+.prices-art
+  display: flex
+  min-height: 100px
+  margin-bottom: 2px
+  background: $colorGrayBG
+  &--bg-red
+    background: $colorRed
+    color: white
+    .prices-art
+      &__icon
+        background: $colorRed
+  &--bg-cyan
+    background: $colorCyan
+  &__content
+    width: 100%
+    flex: 1 1 auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 10px 15px 10px 30px
+  &__title
+    font-size: 21px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: em(0.91, 21)
+  &__description
+    font-size: 21px
+    font-weight: 500
+    text-transform: uppercase
+    margin-top: 0.1em
+    letter-spacing: em(0.91, 21)
+  &__right
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 100%
+    flex: 0 0 140px
+    max-width: 140px
+    background: $colorBlueBG
+    color: white
+    .ico
+      font-size: 63px
+    &--iconed
+      align-items: center
+
+  &__price
+    font-size: 15px
+    padding-left: 25px
+    color: white
+    font-weight: 600
+    text-transform: uppercase
+    letter-spacing: em(0.45, 15)
+    span
+      display: block
+      font-size: 33px
+      font-weight: 700
+
+
++r($xl)
+  .prices-art
+    min-height: 90px
+    &__content
+      padding-left: 20px
+    &__title, &__description
+      font-size: 19px
+    &__right
+      flex-basis: 120px
+      max-width: 120px
+      .ico
+        font-size: 54px
+    &__price
+      font-size: 14px
+      padding-left: 20px
+      span
+        font-size: 28px
+
+
++r($sm)
+  .prices-art
+    min-height: 60px
+    &__title, &__description
+      font-size: 15px
+    &__right
+      flex-basis: 85px
+      max-width: 85px
+      .ico
+        font-size: 38px
+    &__price
+      font-size: 9px
+      padding-left: 15px
+      span
+        font-size: 19px

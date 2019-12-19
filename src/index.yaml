@@ -6,7 +6,9 @@ PageList:
   - file: whatson.html
     ready: 80
   - file: event.html
-    ready: 0
+    ready: 80
+  - file: event-2.html
+    ready: 80
   - file: news.html
     ready: 80
   - file: article.html

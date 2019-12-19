@@ -1,11 +1,29 @@
 $sprite: (
+	googlecal: (
+		offset-x: 0px,
+		offset-y: -80px,
+		width: 52px,
+		height: 52px,
+		total-width: 300px,
+		total-height: 132px,
+		image: '../img/sprite.png'
+	),
+	ical: (
+		offset-x: -62px,
+		offset-y: -80px,
+		width: 46px,
+		height: 46px,
+		total-width: 300px,
+		total-height: 132px,
+		image: '../img/sprite.png'
+	),
 	logo: (
 		offset-x: 0px,
 		offset-y: 0px,
 		width: 300px,
 		height: 70px,
 		total-width: 300px,
-		total-height: 70px,
+		total-height: 132px,
 		image: '../img/sprite.png'
 	),
 );
@@ -64,6 +82,12 @@ $sprite: (
 
 
 
+	.icon-googlecal {
+		@include sprite(googlecal)
+	}
+	.icon-ical {
+		@include sprite(ical)
+	}
 	.icon-logo {
 		@include sprite(logo)
 	}

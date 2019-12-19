@@ -20,6 +20,8 @@
   .content
     &__wrapper
       padding-top: 80px
+      .content__wrapper
+        padding-top: 40px
     &__breadcrumbs
       margin-right: 50px
     &__accardeon
@@ -29,6 +31,8 @@
   .content
     &__wrapper
       padding-top: 60px
+      .content__wrapper
+        padding-top: 0
     &__breadcrumbs
       margin-right: 40px
     &__accardeon
@@ -44,50 +48,6 @@
     &__accardeon
       margin: 35px -15px 50px
 
-// ARTICLE
-.article
-  position: relative
-  margin-top: 70px
-  padding-bottom: 100px
-  .col-12
-    position: static
-
-  &__main-image
-    margin-bottom: 70px
-  &__timestamp
-    font-size: 17px
-    font-weight: 600
-    margin-bottom: 40px
-  &__title
-    margin: 40px 0
-    font-size: 60px
-    line-height: 1.17
-    letter-spacing: em(-0.71, 60)
-  &__text
-    max-width: 590px
-  &__tag
-    position: absolute
-    z-index: 2
-    top: 0px
-    right: 0
-    min-width: 180px
-    font-size: 17px
-    font-weight: 600
-    padding: 10px 20px
-    background: $colorBlueBG
-    color: white
-
-+r($lg)
-  .article
-    margin-top: 50px
-    padding-bottom: 80px
-
-+r($sm)
-  .article
-    margin-top: 30px
-    padding-bottom: 50px
-    &__text
-      padding-right: 5px
 
 // wysiwyg
 .wysiwyg

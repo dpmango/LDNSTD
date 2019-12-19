@@ -57,6 +57,9 @@
       height: 140px
       opacity: 0.7
       background: linear-gradient(to top, rgba(#092746,0.01) 0%, rgba(#092746, .99) 100%);
+  &--short
+    .hero__content > .container
+      min-height: 600px
 
 +r($sm)
   .hero
@@ -67,4 +70,6 @@
     &--top-gradient
       .hero__content > .container
         min-height: 420px
-
+    &--short
+      .hero__content > .container
+        min-height: 320px

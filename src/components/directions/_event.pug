@@ -1,0 +1,54 @@
+include ../breadcrumbs/_breadcrumbs
+
+// DIRECTIONS
+.directions
+  .container-l
+    // section header
+    .section-header.section-header--gray(data-aos="fade")
+      .container-l__inner
+        .section-header__wrapper
+          .section-header__name Plan your visit
+  .directions__content
+    // nav
+    .directions__nav
+      .directions__nav-element(data-aos="fade-up")
+        a(href="#").dirnav
+          .dirnav__icon
+            +svgMono('location')
+          .dirnav__content
+            .dirnav__link
+              span Getting here
+              +svgMono('arrow-right')
+            .dirnav__description Sed do eiusmod tempor
+      .directions__nav-element(data-aos="fade-up")
+        a(href="#").dirnav
+          .dirnav__icon
+            +svgMono('info')
+          .dirnav__content
+            .dirnav__link
+              span Visitor info
+              +svgMono('arrow-right')
+            .dirnav__description Sed do eiusmod tempor
+      .directions__nav-element(data-aos="fade-up")
+        a(href="#").dirnav
+          .dirnav__icon
+            +svgMono('food')
+          .dirnav__content
+            .dirnav__link
+              span Eat & drink
+              +svgMono('arrow-right')
+            .dirnav__description Sed do eiusmod tempor
+      .directions__nav-element(data-aos="fade-up")
+        a(href="#").dirnav
+          .dirnav__icon
+            +svgMono('experience')
+          .dirnav__content
+            .dirnav__link
+              span Add to your visit
+              +svgMono('arrow-right')
+            .dirnav__description Sed do eiusmod tempor
+
+    // map
+    .directions__map
+      .directions__map-container
+        .js-gmap(data-center="51.538663, -0.006461" data-zoom="15")

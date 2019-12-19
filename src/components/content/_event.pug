@@ -1,0 +1,83 @@
+include ../breadcrumbs/_breadcrumbs
+
+// CONTENT
+.content.content--bg-white
+  .container
+    // Article
+    article.article.article--mt0
+      .article__datetime(data-aos="fade-up")
+        .article__datetime-date 30
+        .article__datetime-month Sept
+
+      .article__breadcrumbs(data-aos="fade-up")
+        +breadcrumbs(['Home', 'What’s on', 'Sports'], 'blue')
+
+      .content__wrapper
+        .article__timestamp(data-aos="fade-up") Friday – 8:30pm <br/>30 November 2019
+        .row
+          .col-12.col-md-7.col-lg-6
+            h1.article__title(data-aos="fade-up") West Ham v <br/>Tottenham Hotspur
+            .article__text(data-aos="fade-up")
+              .wysiwyg
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            div(data-teleport-target="article-metrics")
+
+            // cta section
+            .article__cta-section(data-aos="fade-up")
+              .article__cta-section-name Share the Event
+              .article__cta-section-content
+                ul.share.socials-list
+                  li
+                    a(
+                      title="share on facebook"
+                      aria-label="share on facebook"
+                      data-sharer="facebook"
+                      data-hashtag="qwerty"
+                      data-url="http://ldnstd.surge.sh/event.html")
+                      +svgMono('social-facebook')
+                  li
+                    a(
+                      title="share on twitter"
+                      aria-label="share on twitter"
+                      data-sharer="twitter"
+                      data-title="Page title"
+                      data-hashtags="qwerty"
+                      data-url="http://ldnstd.surge.sh/event.html")
+                      +svgMono('social-twitter')
+                  //- li
+                  //-   a(
+                  //-     title="share on twitter"
+                  //-     aria-label="share on twitter"
+                  //-     data-sharer="google"
+                  //-     data-title="Page title"
+                  //-     data-url="http://ldnstd.surge.sh/event.html")
+                  //-     +svgMono('social-google')
+                  li
+                    a(
+                      title="share on linkedin"
+                      aria-label="share on linkedin"
+                      data-sharer="linkedin"
+                      data-hashtags="qwerty"
+                      data-url="http://ldnstd.surge.sh/event.html")
+                      +svgMono('social-linkedin')
+            // cta section
+            .article__cta-section(data-aos="fade-up")
+              .article__cta-section-name Add to my schedule
+              .article__cta-section-content
+                ul.calendar-add-list
+                  li
+                    a(href="#")
+                      i.icon.icon-ical
+                      span iCal
+                  li
+                    a(href="#")
+                      i.icon.icon-googlecal
+                      span Google
+
+          .col-12.col-md-5.offset-lg-1(js-teleport data-teleport-to="article-metrics" data-teleport-condition="<768")
+            .article__metric(data-aos="fade-up")
+              .article__metric-name Number of visitors
+              .article__metric-value 23,479
+            .article__metric(data-aos="fade-up")
+              .article__metric-name Number of visitors
+              .article__metric-value 23,479
