@@ -78,6 +78,23 @@
       background: $colorBlue
       &::before, &::after
         background: $colorBlue
+    &.is-fixed
+      background: $colorBlue
+      color: white
+      .header__buy-btn .btn
+        border-color: white
+        color: white
+        &:hover
+          background: white
+          color: $colorBlue
+      .header-search__opener
+        color: white
+        &:hover
+          color: rgba(white, .7)
+      .hamburger-inner
+        background: white
+        &::before, &::after
+          background: white
 
 body.is-mnav-active
   .header

@@ -95,17 +95,23 @@
           pointer-events: all
           transform: none
         &__opener
-          color: $fontColor
+          color: $fontColor !important
           transform: translate(58px,0)
           &:hover
-            color: $colorCyan
+            color: $colorCyan !important
+  .header.is-fixed
+    .header-search
+      &__content
+        input
+          padding-top: 32px
+          padding-bottom: 32px
 
 +r($sm)
   .header-search
     &__content
       input
         font-size: 13px
-        padding: 28px 60px 28px 20px
+        padding: 30px 60px 30px 20px
     &__opener
       padding: 7px
       .ico
@@ -117,3 +123,9 @@
       .header-search
         &__opener
           transform: translate(40px,0)
+  .header.is-fixed
+    .header-search
+      &__content
+        input
+          padding-top: 28px
+          padding-bottom: 28px

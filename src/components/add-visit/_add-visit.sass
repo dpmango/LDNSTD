@@ -9,18 +9,11 @@
     position: absolute
     right: 0
     top: 0
-    +arr(230, 353, $colorRed, tr)
+    +arr(182, 280, $colorRed, tr)
   &__slider
-    .swiper-container
-      overflow: visible
     .swiper-slide
-      max-width: 930px
+      max-width: 100%
 
-+r(1300)
-  .add-visit
-    &__slider
-      .swiper-slide
-        max-width: 80%
 
 // SIGNLE EVENT
 .visit
@@ -33,10 +26,68 @@
   &__content
     position: relative
     z-index: 2
-    min-height: 720px
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    min-height: 800px
+    color: white
+  &__content-wrapper
+    position: relative
+    padding: 100px 45px 55px
+    &::before
+      display: inline-block
+      content: ' '
+      position: absolute 0
+      z-index: 1
+      opacity: 0
+      background: linear-gradient(180deg, rgba(19,66,115,0.00) 0%, rgba(0,0,0,0.85) 45%)
+  &__link-title, &__description, &__cta
+    position: relative
+    z-index: 3
+  &__link-title
+    display: inline-flex
+    align-items: center
+    span
+      display: inline-block
+      margin-right: 0.35em
+      font-size: 51px
+      line-height: 1
+      font-weight: 900
+      letter-spacing: em(-0.26, 51)
+    .ico
+      font-size: 32px
+      transform: translate(0, 0.1em)
+  &__description
+    margin: 30px 0 45px
+    font-size: 21px
+    font-weight: 500
 
-.swiper-slide-active
-  z-index: 3
++r($lg)
   .visit
-    transform: scale(1.1)
-    transform-origin: center bottom
+    &__content
+      min-height: 500px
+    &__content-wrapper
+      padding: 60px 40px 40px
+    &__link-title
+      span
+        font-size: 42px
+      .ico
+        font-size: 24px
+    &__description
+      font-size: 19px
+      margin: 20px 0 30px
+
++r($sm)
+  .visit
+    &__content
+      min-height: 300px
+    &__content-wrapper
+      padding: 30px 15px 20px
+    &__link-title
+      span
+        font-size: 25px
+      .ico
+        display: none
+    &__description
+      font-size: 15px
+      margin: 10px 0 20px

@@ -31,14 +31,8 @@
         spaceBetween: 0,
         slidesPerView: 'auto',
         normalizeSlideIndex: true,
-        // freeMode: true,
-        // freeModeSticky: true,
-        // autoplay: {
-        //   delay: 5000,
-        // },
         pagination: {
           el: '.swiper-pagination',
-          // dynamicBullets: true,
           clickable: true,
         },
         navigation: {
@@ -54,11 +48,9 @@
         setWrapperSize: false,
         spaceBetween: 0,
         slidesPerView: 'auto',
-        // normalizeSlideIndex: true,
-        centeredSlides: true,
+        normalizeSlideIndex: true,
         pagination: {
           el: '.swiper-pagination',
-          // dynamicBullets: true,
           clickable: true,
         },
         navigation: {

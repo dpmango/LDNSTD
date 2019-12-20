@@ -2,21 +2,21 @@ ProjectTitle: LDNSTD
 
 PageList:
   - file: homepage.html
-    ready: 50
+    ready: 60
   - file: homepage-whitenav.html
-    ready: 50
+    ready: 60
   - file: whatson.html
-    ready: 80
+    ready: 90
   - file: event.html
-    ready: 80
+    ready: 90
   - file: event-2.html
-    ready: 80
+    ready: 90
   - file: news.html
-    ready: 80
+    ready: 90
   - file: article.html
-    ready: 80
+    ready: 90
   - file: getting-here.html
-    ready: 80
+    ready: 90
   - file: eat-drink.html
     ready: 0
   - file: match-day.html
