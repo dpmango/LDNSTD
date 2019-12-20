@@ -16,7 +16,7 @@
     display: flex
     flex-direction: column
     overflow-y: auto
-    padding: 120px 40px 100px
+    padding: 120px 40px 130px
   &__container
     position: relative
     z-index: 2
@@ -123,6 +123,15 @@
       opacity: 1
       transform: none
 
+  &__banner
+    position: absolute
+    z-index: 5
+    bottom: 0
+    left: 50%
+    right: 0
+    width: 100%
+    max-width: 996px
+    transform: translateX(-50%)
 
 body.is-mnav-active
   .mnav
@@ -172,7 +181,7 @@ body.is-mnav-active
 +r($sm)
   .mnav
     &__scroller
-      padding: 90px 10px 40px
+      padding: 90px 10px 100px
     &__container
       margin: 0
     &__menu

@@ -1,0 +1,60 @@
+// T BANNER
+.t-banner
+  display: flex
+  &__content
+    flex: 1 1 auto
+    background: white
+    padding: 25px 40px
+  &__cta
+    flex: 0 0 280px
+    max-width: 280px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    background: $colorCyan
+    font-size: 19px
+    font-weight: 600
+    padding: 20px 35px
+    transition: background .25s $ease, color .25s $ease
+    &:hover
+      background: $colorRed
+      color: white
+  &__title
+    font-size: 21px
+    line-height: 1.2
+    font-weight: 500
+    span
+      display: inline-block
+      &.t-banner__title-date
+        display: block
+  &__title-name
+    margin-right: 0.3em
+    font-weight: 700
+    color: $colorBlue
+  &__title-warn
+    color: $colorRed
+  &__title-date
+
++r($lg)
+  .t-banner
+    &__cta
+      flex-basis: 205px
+      max-width: 205px
+      font-size: 17px
+      padding: 15px 20px
+    &__title
+      font-size: 17px
+
++r($sm)
+  .t-banner
+    &__content
+      padding: 10px 15px
+    &__cta
+      flex-basis: 105px
+      max-width: 105px
+      font-size: 11px
+      padding: 15px 13px
+    &__title
+      font-size: 11px
+      span
+        display: block
