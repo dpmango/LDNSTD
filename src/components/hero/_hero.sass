@@ -29,6 +29,7 @@
       padding-bottom: 180px
 
   &--bottom-gradient
+    background-color: $colorBlue
     &::after
       display: inline-block
       content: ' '
@@ -38,10 +39,12 @@
       left: 0
       right: 0
       height: 50vh
-      background: linear-gradient(180deg, rgba(19,66,115,0.00) 0%, rgba(0,0,0,0.85) 21%)
+      background: linear-gradient(-180deg, rgba(19,66,115,0.00) 0%, rgba(0,0,0,0.85) 21%)
     .hero__content > .container
       min-height: 125vh
-      padding-bottom: calc(25vh + 120px)
+      padding-bottom: calc(25vh + 160px)
+    .hero__background
+      bottom: calc(25vh + 120px)
     &.hero--section-fold
       .hero__content > .container
         padding-bottom: calc(25vh + 180px)
