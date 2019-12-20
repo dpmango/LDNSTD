@@ -4,7 +4,7 @@
   overflow: hidden
   &__background
     z-index: 1
-    background-color: $colorBlue
+    background-color: $colorBlueDark
     img
       transform-origin: center bottom
   &__content
@@ -23,13 +23,16 @@
   &__text
     .h1-title
       margin: 0 0 40px
+    &--shadow
+      .h1-title
+        text-shadow: 2px 2px 50px rgba(14,52,92,0.75)
 
   &--section-fold
     .hero__content > .container
       padding-bottom: 180px
 
   &--bottom-gradient
-    background-color: $colorBlue
+    background-color: $colorBlueDark
     &::after
       display: inline-block
       content: ' '

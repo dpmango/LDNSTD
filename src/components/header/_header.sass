@@ -10,7 +10,7 @@
   color: white
   backface-visibility: hidden
   transform-style: preserve-3d
-  transition: background .25s .1s $ease
+  transition: background .25s .1s $ease, color .25s .1s $ease
   &__wrapper
     display: flex
     align-items: center
@@ -44,9 +44,9 @@
   &.is-fixed
     // should be normalized to -100% scroll at this point
     position: fixed
-    background: $colorBlueBG
+    background: $colorBlue
     transform: translate3d(0,-100%,0) !important
-    transition: transform .25s $ease, background .25s $ease
+    transition: transform .25s $ease, background .25s $ease, color .25s $ease
     .header__wrapper
       padding-top: 10px
       padding-bottom: 8px
@@ -56,20 +56,48 @@
     transform: translate3d(0,0,0) !important
 
   &.is-transitioning
-    transition: transform .25s $ease, background .25s $ease
+    transition: transform .25s $ease, background .25s $ease, color .25s $ease
     transform: translate3d(0,-100%,0) !important
 
   &[data-modifier="header-fill"]
-    background: $colorBlueBG
+    background: $colorBlue
+  &[data-modifier="header-white"]
+    background: white
+    color: $colorBlue
+    .header__buy-btn .btn
+      border-color: $colorBlue
+      color: $colorBlue
+      &:hover
+        background: $colorBlue
+        color: white
+    .header-search__opener
+      color: $colorBlue
+      &:hover
+        color: rgba($colorBlue, .7)
+    .hamburger-inner
+      background: $colorBlue
+      &::before, &::after
+        background: $colorBlue
 
 body.is-mnav-active
   .header
-    background: $colorBlueBG
+    background: $colorBlue
     &__buy-btn
       opacity: 0
       transform: translate(0,-7px)
       pointer-events: none
 
+    &[data-modifier="header-white"]
+      background: $colorBlue
+      color: white
+      .header-search__opener
+        color: white
+        &:hover
+          color: rgba(white, .7)
+      .hamburger-inner
+        background: white
+        &::before, &::after
+          background: white
 
 // +r($lg)
 //   .header
