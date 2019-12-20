@@ -18,10 +18,10 @@ PageList:
   - file: getting-here.html
     ready: 90
   - file: eat-drink.html
-    ready: 0
+    ready: 40
   - file: match-day.html
-    ready: 0
+    ready: 40
   - file: book-tour.html
-    ready: 0
+    ready: 40
   - file: functions.html
-    ready: 0
+    ready: 40
