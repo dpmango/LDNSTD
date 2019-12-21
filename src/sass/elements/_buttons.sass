@@ -8,20 +8,27 @@ button
     outline: none
 
 .btn
-  display: inline-block
+  display: inline-flex
+  align-items: center
   position: relative
   text-align: center
   cursor: pointer
   transition: all $transitionSpeed $ease
+  span
+    display: inline-block
+    margin-right: 0.5em
+  .ico
+    font-size: 14px
+    transform: translate(0, 0px)
+    will-change: transform
+    transition: transform .25s $ease
   &:focus, &:active
     outline: none
-  &--block
-    display: block
-    width: 100%
+  &:hover
+    .ico
+      transform: translate(5px, 0px)
 
   &-primary
-    display: inline-flex
-    align-items: center
     font-size: 21px
     font-weight: 600
     padding: 17px 32px
@@ -29,19 +36,21 @@ button
     border-style: solid
     border-color: $colorBlue
     color: $colorBlue
-    span
-      display: inline-block
-      margin-right: 0.5em
-    .ico
-      font-size: 14px
-      transform: translate(0, 0px)
-      will-change: transform
-      transition: transform .25s $ease
     &:hover
       background: $colorBlue
       color: white
-      .ico
-        transform: translate(5px, 0px)
+
+  &-blue
+    font-size: 17px
+    font-weight: 600
+    padding: 20px 30px
+    border: 0
+    color: white
+    background: $colorBlue
+    // border: 2px solid $colorBlue
+    &:hover
+      color: $colorBlue
+      background: white
 
   &-rounded
     font-size: 13px
@@ -63,6 +72,12 @@ button
     &:hover
       background: white
       color: $fontColor
+
+  &--block
+    display: block
+    width: 100%
+    text-align: center
+
 
 +r($sm)
   .btn

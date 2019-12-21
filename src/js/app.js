@@ -65,11 +65,12 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
     app.initPlugins = function(fromPjax) {
       APP.Plugins.Teleport.init();
       APP.Plugins.Sliders.init(fromPjax);
-      APP.Plugins.Modals.init();
-      APP.Plugins.Masks.init();
+      // APP.Plugins.Modals.init();
+      // APP.Plugins.Masks.init();
       APP.Plugins.Selectric.init();
-      APP.Plugins.ScrollReveal.init();
-      APP.Plugins.TextareaAutoExpand.init();
+      APP.Plugins.DatePicker.init();
+      // APP.Plugins.ScrollReveal.init();
+      // APP.Plugins.TextareaAutoExpand.init();
       APP.Plugins.Validations.init();
       APP.Plugins.LAYOUT.init(fromPjax);
       APP.Plugins.Gmaps.init();
@@ -83,6 +84,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Components.Footer.init(fromPjax);
       APP.Components.Events.init(fromPjax);
       APP.Components.Content.init(fromPjax);
+      APP.Components.Video.init(fromPjax);
     };
 
     return app;

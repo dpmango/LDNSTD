@@ -20,8 +20,8 @@ PageList:
   - file: eat-drink.html
     ready: 40
   - file: match-day.html
-    ready: 40
+    ready: 50
   - file: book-tour.html
-    ready: 40
+    ready: 60
   - file: functions.html
     ready: 40

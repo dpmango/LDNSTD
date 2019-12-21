@@ -4,7 +4,7 @@ import picturefill from 'picturefill';
 import viewportUnitsBuggyfill from 'viewport-units-buggyfill';
 import objectFitImages from 'object-fit-images/dist/ofi.es-modules.js';
 import Swiper from 'swiper/js/swiper.esm.bundle';
-import magnificPopup from 'magnific-popup';
+// import magnificPopup from 'magnific-popup';
 import AOS from 'aos';
 import scrollMonitor from 'scrollmonitor';
 import validate from 'jquery-validation';
@@ -17,6 +17,8 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import debounce from 'lodash/debounce';
 import throttle from 'lodash/throttle';
 import sharer from 'sharer.js';
+import datepicker from 'air-datepicker';
+import datepickerLang from 'air-datepicker/dist/js/i18n/datepicker.en.js';
 
 // expose imports to window to use in app.js
 // (jquery is exposed in expose-loader)
@@ -27,7 +29,7 @@ window.picturefill = picturefill;
 window.objectFitImages = objectFitImages;
 window.viewportUnitsBuggyfill = viewportUnitsBuggyfill;
 window.Swiper = Swiper;
-window.magnificPopup = magnificPopup;
+// window.magnificPopup = magnificPopup;
 window.AOS = AOS;
 window.scrollMonitor = scrollMonitor;
 window.validate = validate;
@@ -40,3 +42,4 @@ window.TweenMax = TweenMax;
 window.debounce = debounce;
 window.throttle = throttle;
 window.sharer = sharer;
+window.datepicker = datepicker;

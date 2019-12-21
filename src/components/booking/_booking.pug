@@ -1,0 +1,32 @@
+// BOOKING
+.booking
+  .container-l
+    .booking__wrapper
+      .container-l__inner
+        .booking__text(data-aos="fade-up")
+          .h2-title.c-blue Ready to book? OR Book now!
+          p.p-main Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua.
+        form(action="#" js-validate data-aos="fade-up").booking__form
+          .row
+            .col-12.col-md-4
+              .ui-group
+                label No. of tickets required
+                select(js-select required placeholder="PLease select")
+                  option(selected disabled) Please select
+                  option 1 ticket
+                  option 2 tickets
+                  option 3 tickets
+                  option 4 tickets
+                  option 5 tickets
+                  option Group ticket (10+)
+            .col-12.col-md-5
+              .ui-group
+                label See Calendar
+                .ui-input.ui-input--iconed
+                  input(js-datepicker placeholder="Check Dates")
+                  .ui-input__icon
+                    +svgMono('calendar')
+            .col-12.col-md-3
+              .ui-group
+                label
+                button(type="submit").btn.btn-blue.btn--block Search
