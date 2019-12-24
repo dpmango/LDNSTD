@@ -1,0 +1,19 @@
+// VIDEO SECTION
+.video-section
+  // types - html, iframe (youtube)
+  // vimeo in progress
+  .video.js-video(data-type="iframe")
+    .video__placeholder.background-cover-ofit(style="background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_256,c_fill,e_blur:400/v1576940711/LDNSTD/video_functions.jpg)")
+      img(js-lazy data-src='img/video_functions.jpg' data-srcset='img/video_functions@2x.jpg 2x')
+    .video__content(data-aos="fade-up")
+      .container
+        .video__content-wrapper
+          .video__quotetext An inspirational venue for inspirational meetings
+          .video__play
+            +svgMono('play-btn')
+    .video__object(data-ar="16:9")
+      iframe(src="https://www.youtube.com/embed/gyPr_vtsg6M?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      //- video(controls loop playsinline)
+      //-   source(src="video/test-video.mp4" type="video/mp4")
+      //-   source(src="video/test-video.webm" type="video/webm")
+      //-   source(src="/video/test-video.ogg" type="video/ogg")

@@ -24,4 +24,4 @@ PageList:
   - file: book-tour.html
     ready: 60
   - file: functions.html
-    ready: 40
+    ready: 60

@@ -76,6 +76,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.Gmaps.init();
       APP.Plugins.ScalerMobile.init(fromPjax);
       APP.Plugins.CustomParallax.init(fromPjax);
+      APP.Plugins.Sticky.init();
     };
 
     // All components from `src/componenets`

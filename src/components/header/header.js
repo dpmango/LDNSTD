@@ -7,6 +7,7 @@
       header: {
         container: undefined,
         bottomPoint: undefined,
+        isFixedVisible: false,
       },
     },
     init: function(fromPjax) {
@@ -116,8 +117,12 @@
 
           if (scroll.y > this.data.header.bottomPoint * 2 && scroll.direction === 'up') {
             this.data.header.container.addClass(visibleClass);
+            $('body').addClass('is-header-fixed-visible');
+            this.data.header.isFixedVisible = true;
           } else {
             this.data.header.container.removeClass(visibleClass);
+            $('body').removeClass('is-header-fixed-visible');
+            this.data.header.isFixedVisible = false;
           }
         } else {
           // emulate position absolute by giving negative transform on initial scroll
