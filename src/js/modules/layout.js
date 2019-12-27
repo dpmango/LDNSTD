@@ -40,10 +40,16 @@
             // get position of element to window
             var $elPosLeft = $el[0].getBoundingClientRect().left;
 
+            // is container keeper
+            var keepContainer = $el.data('keep-container');
+
             // set values
             if (position === 'left') {
               setMarginPx = $elPosLeft * -1;
               $el.css({ 'margin-left': setMarginPx });
+              if (keepContainer) {
+                $el.css({ 'padding-left': setMarginPx * -1 });
+              }
             } else if (position === 'right') {
               var wWidth = window.innerWidth;
               var $elWidth = $el.innerWidth();
@@ -51,6 +57,9 @@
 
               setMarginPx = (wWidth - $elPosLeft - ($elWidth - elMarginRight)) * -1;
               $el.css({ 'margin-right': setMarginPx });
+              if (keepContainer) {
+                $el.css({ 'padding-right': setMarginPx * -1 });
+              }
             }
           } else {
             $el.attr('style', '');

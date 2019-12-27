@@ -1,0 +1,122 @@
+
+// DIRECTIONS INFO CONTENT
+.dirinfo
+  display: flex
+  flex-direction: column
+  min-height: 680px
+  padding-left: 15px
+  &__contents
+    margin-top: auto
+  &__crumb
+    font-size: 17px
+    font-weight: 600
+    color: $colorBlue
+  &__timestamp
+    margin-top: 24px
+    font-size: 13px
+    line-height: 1.3
+    font-weight: 600
+  &__title
+    margin-top: 10px
+    font-size: 25px
+    line-height: 1.24
+    font-weight: 700
+  &__nav
+    padding-top: 20px
+    margin-top: auto
+    margin-bottom: auto
+  &__nav-link
+    display: flex
+    align-items: center
+    color: $colorBlue
+    min-height: 85px
+    border-bottom: 1px solid rgba($colorBlue, .2)
+    &:last-child
+      border-bottom: 0
+    &:hover
+      .dirinfo
+        &__nav-title
+          &::after
+            transform: translate(7px, -50%) rotate(-90deg)
+  &__nav-icon
+    flex: 0 0 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    font-size: 0
+    .ico
+      font-size: 32px
+      &-mono-weather
+        font-size: 24px
+  &__nav-title
+    position: relative
+    flex: 1 1 auto
+    padding-left: 18px
+    font-size: 17px
+    font-weight: 600
+    &::after
+      display: inline-block
+      content: ' '
+      position: absolute
+      top: 50%
+      right: 7px
+      transform: translateY(-50%) rotate(-90deg)
+      size: 15px
+      background: svg-load('../icons/svg-mono/caret.svg', fill=$colorBlue) no-repeat center
+      background-size: contain
+      backface-visibility: hidden
+      will-change: transform
+      transform-style: preserve-3d
+      pointer-events: none
+      transition: all .25s $ease
+
++r($lg)
+  .dirinfo
+    min-height: auto
+    padding-left: 0
+    padding-top: 40px
+    padding-bottom: 40px
+    &__nav
+      max-width: 385px
+    &__crumb
+      font-size: 15px
+    &__timestamp
+      font-size: 12px
+      margin-top: 15px
+    &__title
+      margin-top: 12px
+      font-size: 23px
+    &__nav-link
+      min-height: 70px
+
+
++r($sm)
+  .dirinfo
+    // min-height: 300px
+    padding-top: 20px
+    padding-bottom: 20px
+    &__crumb
+      font-size: 13px
+    &__timestamp
+      font-size: 11px
+      margin-top: 10px
+    &__title
+      margin-top: 12px
+      font-size: 21px
+    &__nav
+      padding-top: 5px
+    &__nav-link
+      min-height: 60px
+    &__nav-title
+      font-size: 15px
+      padding-left: 10px
+      &::after
+        size: 12px
+        right: 5px
+    &__nav-icon
+      flex-basis: 40px
+      .ico
+        font-size: 24px
+        &-mono-weather
+          font-size: 18px

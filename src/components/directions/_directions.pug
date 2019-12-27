@@ -46,10 +46,35 @@
             .dirnav__description Sed do eiusmod tempor
 
     .directions__map
-      .directions__map-container
-        .js-gmap(data-center="51.538663, -0.006461" data-zoom="15")
+      .directions__map-container.directions__map-container--collumned
+        .js-gmap(data-center="51.538663, -0.013461" data-zoom="15")
       .directions__overlay
         .container
-          .row
-            .col-12.col-md-6.offset-md-6
-              .directions__info.js-stick-to-window(data-position="right" data-stop="<991")
+          .row.no-gutters
+            .col-12.col-lg-6.offset-lg-6
+              .directions__info.js-stick-to-window(data-position="right" data-keep-container="true" data-stop="<992")
+                .row.no-gutters
+                  .col-12.col-lg-8.offset-lg-2
+                    // DIRINFO
+                    .dirinfo
+                      .dirinfo__contents(data-aos="fade-up")
+                        .dirinfo__crumb Next event
+                        .dirinfo__timestamp 30 November 2019 <br/>Friday – 8:30pm
+                        .dirinfo__title West Ham vs <br/>Tottenham Hotspur
+                      .dirinfo__nav(data-aos="fade-up")
+                        a(href="#").dirinfo__nav-link
+                          .dirinfo__nav-icon
+                            +svgMono('tickets')
+                          .dirinfo__nav-title Book Tickets
+                        a(href="#").dirinfo__nav-link
+                          .dirinfo__nav-icon
+                            +svgMono('clock')
+                          .dirinfo__nav-title Gates open
+                        a(href="#").dirinfo__nav-link
+                          .dirinfo__nav-icon
+                            +svgMono('info')
+                          .dirinfo__nav-title Information
+                        a(href="#").dirinfo__nav-link
+                          .dirinfo__nav-icon
+                            +svgMono('weather')
+                          .dirinfo__nav-title Weather

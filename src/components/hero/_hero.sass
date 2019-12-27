@@ -73,6 +73,18 @@
       .container
         padding-top: 90px
         padding-bottom: 90px
+    &--bottom-gradient
+      &::after
+        height: 280px
+        bottom: -120px
+      .hero__content > .container
+        min-height: 500px
+        padding-bottom: 90px
+      .hero__background
+        bottom: 80px
+      &.hero--section-fold
+        .hero__content > .container
+          padding-bottom: 90px
     &--top-gradient
       .hero__content > .container
         min-height: 420px
