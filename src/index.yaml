@@ -2,9 +2,9 @@ ProjectTitle: LDNSTD
 
 PageList:
   - file: homepage.html
-    ready: 80
+    ready: 90
   - file: homepage-whitenav.html
-    ready: 80
+    ready: 90
   - file: whatson.html
     ready: 90
   - file: event.html

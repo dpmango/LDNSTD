@@ -2,18 +2,42 @@
 .add-visit
   position: relative
   z-index: 2
-  background: $colorGrayBG
-  &::before
+  &::before, &::after
     display: inline-block
     content: ' '
     position: absolute
     right: 0
     top: 0
+    pointer-events: none
+  &::after
+    left: 0
+    height: 360px
+    z-index: 1
+    background: $colorGrayBG
+  &::before
     +arr(182, 280, $colorRed, tr)
+    z-index: 3
+  .container-l
+    position: relative
+    z-index: 2
   &__slider
     .swiper-slide
       max-width: 100%
 
++r(1340)
+  .add-visit
+    &::before
+      right: -20px
+
++r($lg)
+  .add-visit
+    &::before
+      +arr(150, 240, $colorRed, tr)
+
++r($md)
+  .add-visit
+    &::before
+      display: none
 
 // SIGNLE EVENT
 .visit
