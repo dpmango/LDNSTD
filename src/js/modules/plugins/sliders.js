@@ -59,6 +59,20 @@
         },
       });
 
+      // SWIPER ARTICLE
+      new Swiper('.js-swiper-article', {
+        loop: true,
+        watchOverflow: true,
+        setWrapperSize: false,
+        spaceBetween: 0,
+        slidesPerView: 1,
+        normalizeSlideIndex: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+
       // SWIPER NEWS CAROUSEL
       var swiperNews = new Swiper('.js-swiper-news', {
         wrapperClass: 'swiper-wrapper',

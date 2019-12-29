@@ -10,19 +10,48 @@ include ../breadcrumbs/_breadcrumbs
 
         // Article
         article.article
+          // article slide
+          .article__slider
+            .swiper-container.swiper-bullets.js-swiper-article
+              .swiper-wrapper
+                .swiper-slide
+                  .article__main-image
+                    .scaler(style="padding-bottom: "+ (664/1200) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576674356/LDNSTD/article_image.jpg)")
+                      img(js-lazy data-src='img/article_image.jpg' data-srcset='img/article_image@2x.jpg 2x')
+                    .article__tag.js-stick-to-window(data-aos="fade") Sports
+                .swiper-slide
+                  .article__main-image
+                    .scaler(style="padding-bottom: "+ (664/1200) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576674356/LDNSTD/article_image.jpg)")
+                      video(js-lazy loop muted autoplay playsinline)
+                        data-poster(src='img/hero_event.jpg')
+                        data-src(src="video/fifa.mp4" type="video/mp4")
+                        data-src(src="video/fifa.webm" type="video/webm")
+                        //- source(src="/video/test-video.ogg" type="video/ogg")
+                    .article__tag.js-stick-to-window(data-aos="fade") Video slide
+                .swiper-slide
+                  .article__main-image
+                    .scaler(style="padding-bottom: "+ (664/1200) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576674356/LDNSTD/article_image.jpg)")
+                      img(js-lazy data-src='img/article_image.jpg' data-srcset='img/article_image@2x.jpg 2x')
+                    .article__tag.js-stick-to-window(data-aos="fade") Sports
+
+              .swiper-pagination
+
           .row
-            .col-12.col-md-9.offset-md-1
-              .article__tag.js-stick-to-window(data-position="right" data-stop="<575" data-aos="fade") Sports
-
-              .article__main-image
-                .scaler(style="padding-bottom: "+ (674/894) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576674356/LDNSTD/article_image.jpg)")
-                  img(js-lazy data-src='img/article_image.jpg' data-srcset='img/article_image@2x.jpg 2x')
-
+            .col-12.col-md-10.col-lg-9.offset-md-1
               .article__timestamp(data-aos="fade-up") 30 November 2019
               h1.article__title(data-aos="fade-up") Headline goes here and can take up to two lines
 
-              .article__text(data-aos="fade-up")
-                .wysiwyg
-                  blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          .row.align-items-md-end
+            .col-12.col-md-6.offset-md-1
+              .wysiwyg(data-aos="fade-up")
+                blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            .col-12.col-md-4.col-lg-3.offset-lg-1
+              .article__quote(data-aos="fade-up")
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+
+          .row
+            .col-12.col-md-10.offset-md-1
+              .article__video
+                include ../video/_inline

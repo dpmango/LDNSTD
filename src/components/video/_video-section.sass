@@ -39,6 +39,7 @@
     display: inline-block
     font-size: 0
     cursor: pointer
+    pointer-events: all
     color: $colorCyan
     transition: color .25s $ease
     .ico
@@ -74,6 +75,12 @@
       object-fit: cover
       object-position: center center
 
+  &--content
+    .video__content
+      display: flex
+      align-items: center
+      justify-content: center
+
   &.is-playing
     .video
       &__placeholder
@@ -90,3 +97,10 @@
       opacity: 1
       pointer-events: all
 
++r($sm)
+  .video
+    &__quotetext
+      font-size: 24px
+    &__play
+      .ico
+        font-size: 48px
