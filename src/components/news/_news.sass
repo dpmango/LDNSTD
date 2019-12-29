@@ -160,8 +160,13 @@
   transition: box-shadow .25s $ease
   &:hover
     box-shadow: none
+    .news-card__image .scaler
+      transform: scale(1.06) rotate(-2deg)
   &__image
     font-size: 0
+    overflow: hidden
+    .scaler
+      transition: transform .35s ease-out
   &__content
     flex: 1 0 auto
     position: relative

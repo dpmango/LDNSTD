@@ -44,7 +44,35 @@ include ../breadcrumbs/_breadcrumbs
                 .news-card__short
                   p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua.
 
-          each card in [1,2,3,4]
+          each card in [1,2]
+            .col-12.col-md-6
+              // news card
+              a(href="#").news-card
+                .news-card__image
+                  .scaler(js-scaler-mobile data-ar-768="370/370" style="padding-bottom: "+ (251/370) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_4.jpg)")
+                    img(js-lazy data-src='img/event_card_4.jpg' data-srcset='img/event_card_4@2x.jpg 2x')
+                .news-card__content(data-aos="fade")
+                  .news-card__tag Sports
+                  .news-card__timestamp 30 November 2019
+                  .news-card__title Headline goes here
+                  .news-card__short
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua.
+
+          each card in [1,2,3]
+            .col-12.col-md-6.col-lg-4
+              // news card
+              a(href="#").news-card.news-card--slide
+                .news-card__image
+                  .scaler(js-scaler-mobile data-ar-768="370/370" style="padding-bottom: "+ (251/370) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_4.jpg)")
+                    img(js-lazy data-src='img/event_card_4.jpg' data-srcset='img/event_card_4@2x.jpg 2x')
+                .news-card__content(data-aos="fade")
+                  .news-card__tag Sports
+                  .news-card__timestamp 30 November 2019
+                  .news-card__title Headline goes here
+                  .news-card__short
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua.
+
+          each card in [1,2]
             .col-12.col-md-6
               // news card
               a(href="#").news-card

@@ -243,9 +243,13 @@
   transition: box-shadow .25s $ease
   &:hover
     box-shadow: none
+    .event-card__image .scaler
+      transform: scale(1.06) rotate(-2deg)
   &__image
     font-size: 0
-    // scaler instance
+    overflow: hidden
+    .scaler
+      transition: transform .35s ease-out
   &__date
     position: absolute
     top: 0

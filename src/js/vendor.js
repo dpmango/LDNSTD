@@ -12,6 +12,7 @@ import mask from 'jquery-mask-plugin';
 import selectric from 'jquery-selectric';
 import Barba from 'barba.js';
 import Lazy from 'jquery-lazy';
+import LazyAV from 'jquery-lazy/plugins/jquery.lazy.av.min.js';
 import TweenMax from 'gsap/TweenMax';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import debounce from 'lodash/debounce';
