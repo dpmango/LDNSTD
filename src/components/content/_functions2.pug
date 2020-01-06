@@ -1,12 +1,20 @@
 
 // content section
-.content-section
+//- .content-section
+//-   .container
+//-     .row
+//-       .col-12.col-md-5
+//-         h2.h2-title.c-blue(data-aos="fade-up") We support a range of events
+//-         p.p-big(data-aos="fade-up") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+// CONTENT
+.content
   .container
-    .row
-      .col-12.col-md-5
-        h2.h2-title.c-blue(data-aos="fade-up") We support a range of events
-        .wysiwyg(data-aos="fade-up")
-          blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    // Article
+    article.article
+      .article__text(data-aos="fade-up")
+        h2.h2-title.c-blue We support a range of events
+        p.p-big Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 // content nav
 .content-tabs
@@ -32,7 +40,11 @@
     .container
       h2.h2-title.c-blue(data-aos="fade-up") New for 2020
       .row
-        .col-12.col-md-5
+        .col-12.col-md-6.offset-lg-1.order-md-2
+          .scaler(data-ar="4:3" style="background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_1.jpg)")
+            img(js-lazy data-src='img/event_card_1.jpg' data-srcset='img/event_card_1@2x.jpg 2x')
+
+        .col-12.col-md-6.col-lg-5.order-md-1.mt-md-2
           .wysiwyg(data-aos="fade-up")
             blockquote We are delighted that we can now offer guided match day tours so come and take a behind the scenes view of London Stadium only hours before the players battle it out on the pitch.
             p This is a different style of tour as this tour will be guided in small groups and everyone on the tour will be accompanied by one of our exceptional Experience Makers. Our guides are full of character, knowledge and stories about West Ham United, athletics and the incredible feat of architecture that is the London Stadium, so you will be entertained on your journey through the stadium.
@@ -42,16 +54,18 @@
               | To book this exclusive access tour, <a href="#">click here</a>.
 
             p <strong>Please note:</strong> match day tours are sometimes subject to route changes.
-        .col-12.col-md-6
-          .scaler(data-ar="16:9")
-            // image here
+
 
   // content section
   .content-section.js-content-navsection(data-nav-section="2")
     .container
       h2.h2-title.c-blue(data-aos="fade-up") Our tailor-made events
       .row
-        .col-12.col-md-6
+        .col-12.col-md-6.offset-lg-1.order-md-2
+          .scaler(data-ar="4:3" style="background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_1.jpg)")
+            img(js-lazy data-src='img/event_card_1.jpg' data-srcset='img/event_card_1@2x.jpg 2x')
+
+        .col-12.col-md-6.col-lg-5.order-md-1.mt-md-2
           .wysiwyg(data-aos="fade-up")
             h3 Exciting venues
             p
@@ -65,19 +79,15 @@
               li Some rooms over-looking the bowl of the stadium
               li Other rooms overlooking the City of London
 
-        .col-12.col-md-6
-          .scaler(data-ar="16:9")
-            // image here
-
   // content section
   .content-section.bg-gray.js-content-navsection(data-nav-section="3")
     .container
       .row
-        .col-12.col-md-6
-          .scaler(data-ar="16:9")
-            // image here
+        .col-12.col-md-6.offset-lg-1.order-md-2
+          .scaler(data-ar="4:3" style="background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_1.jpg)")
+            img(js-lazy data-src='img/event_card_1.jpg' data-srcset='img/event_card_1@2x.jpg 2x')
 
-        .col-12.col-md-6
+        .col-12.col-md-6.col-lg-5.order-md-1.mt-md-2
           .wysiwyg(data-aos="fade-up")
             h3 Creative food and drink
             p
@@ -95,7 +105,11 @@
   .content-section.js-content-navsection(data-nav-section="4")
     .container
       .row
-        .col-12.col-md-6
+        .col-12.col-md-6.offset-lg-1.order-md-2
+          .scaler(data-ar="4:3" style="background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_1.jpg)")
+            img(js-lazy data-src='img/event_card_1.jpg' data-srcset='img/event_card_1@2x.jpg 2x')
+
+        .col-12.col-md-6.col-lg-5.order-md-1.mt-md-2
           .wysiwyg(data-aos="fade-up")
             h3 Excellent support
             p
@@ -109,6 +123,3 @@
               li Ingenious photography
               li Props and themes
               li Whatever you want – we will source it
-        .col-12.col-md-6
-          .scaler(data-ar="16:9")
-            // image here

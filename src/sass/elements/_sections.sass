@@ -63,6 +63,7 @@
 .sec-mt-fold-t
   margin-top: -260px
 
+
 +r($lg)
   .section-header
     &__title
@@ -122,3 +123,49 @@
     margin-top: -80px
   .sec-mt-fold-t
     margin-top: -110px
+
+
+// Content section
+.content-section
+  padding: 80px 0 100px
+  +r($lg)
+    padding: 60px 0 80px
+  +r($md)
+    padding: 40px 0 50px
+  +r($sm)
+    padding: 20px 0 30px
+
+// section triangle
+.sec-tr
+  position: relative
+  &::after
+    display: inline-block
+    content: ' '
+    position: absolute
+    top: 0
+    right: 0
+    pointer-events: none
+    z-index: 1
+  > .container
+    position: relative
+    z-index: 2
+  &--red
+    &::after
+      +arr(428, 660, $colorRed, tr)
+  &--cyan
+    &::after
+      +arr(428, 660, $colorCyan, tr)
+
++r($md)
+  .sec-tr
+    &--red, &--cyan
+      &::after
+        border-right-width: 300px
+        border-bottom-width: 462px
+
++r($sm)
+  .sec-tr
+    &--red, &--cyan
+      &::after
+        border-right-width: 171px
+        border-bottom-width: 264px

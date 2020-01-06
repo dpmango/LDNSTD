@@ -201,6 +201,8 @@
       margin-top: 0
     &__text
       padding-right: 5px
+      .p-big
+        padding-right: 15px
     .wysiwyg
       padding-right: 20px
     &__breadcrumbs
@@ -276,96 +278,3 @@
         width: 40px
       p
         font-size: 17px
-
-.prices-art
-  display: flex
-  min-height: 100px
-  margin-bottom: 2px
-  background: $colorGrayBG
-  &--bg-red
-    background: $colorRed
-    color: white
-    .prices-art
-      &__icon
-        background: $colorRed
-  &--bg-cyan
-    background: $colorCyan
-  &__content
-    width: 100%
-    flex: 1 1 auto
-    display: flex
-    flex-direction: column
-    justify-content: center
-    padding: 10px 15px 10px 30px
-  &__title
-    font-size: 21px
-    font-weight: 700
-    text-transform: uppercase
-    letter-spacing: em(0.91, 21)
-  &__description
-    font-size: 21px
-    font-weight: 500
-    text-transform: uppercase
-    margin-top: 0.1em
-    letter-spacing: em(0.91, 21)
-  &__right
-    display: flex
-    flex-direction: column
-    justify-content: center
-    width: 100%
-    flex: 0 0 140px
-    max-width: 140px
-    background: $colorBlue
-    color: white
-    .ico
-      font-size: 63px
-    &--iconed
-      align-items: center
-
-  &__price
-    font-size: 15px
-    padding-left: 25px
-    color: white
-    font-weight: 600
-    text-transform: uppercase
-    letter-spacing: em(0.45, 15)
-    span
-      display: block
-      font-size: 33px
-      font-weight: 700
-
-
-+r($xl)
-  .prices-art
-    min-height: 90px
-    &__content
-      padding-left: 20px
-    &__title, &__description
-      font-size: 19px
-    &__right
-      flex-basis: 120px
-      max-width: 120px
-      .ico
-        font-size: 54px
-    &__price
-      font-size: 14px
-      padding-left: 20px
-      span
-        font-size: 28px
-
-
-+r($sm)
-  .prices-art
-    min-height: 60px
-    &__title, &__description
-      font-size: 15px
-    &__right
-      flex-basis: 85px
-      max-width: 85px
-      .ico
-        font-size: 38px
-    &__price
-      font-size: 9px
-      padding-left: 15px
-      span
-        font-size: 19px
