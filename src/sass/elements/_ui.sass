@@ -14,6 +14,18 @@
     line-height: 1
     letter-spacing: em(-0.38, 19)
 
++r($md)
+  .ui-group
+    margin-bottom: 40px
+    label
+      font-size: 17px
+      min-height: 0px
+
++r($sm)
+  .ui-group
+    label
+      font-size: 15px
+
 // for input or textarea element
 .ui-input
   position: relative
@@ -60,6 +72,14 @@
 .ui-input textarea
   resize: vertical
 
++r($sm)
+  .ui-input
+    input
+      font-size: 15px
+      padding: 21px 22px
+    &--iconed
+      input
+        padding-right: 80px
 
 
 /* Checkbox

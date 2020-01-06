@@ -127,13 +127,82 @@
 
 // Content section
 .content-section
+  position: relative
   padding: 80px 0 100px
-  +r($lg)
+  &__cta-section
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    .container
+      display: flex
+      justify-content: flex-end
+  &__buy-btn
+    width: 100%
+    max-width: 282px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    background: $colorCyan
+    padding: 37px 30px
+    box-shadow: 0px 10px 20px rgba(#092746, .15)
+    transition: background .25s $ease, color .25s $ease
+    span
+      display: inline-block
+      margin-right: 0.5em
+      font-size: 23px
+      font-weight: 600
+    .ico
+      font-size: 19px
+      transform: translate(0, 0px)
+      will-change: transform
+      transition: transform .25s $ease
+    &:hover
+      background: $colorBlue
+      color: white
+      .ico
+        transform: translate(5px, 0px)
+  &--with-slider-dots
+    padding-bottom: 10px
+
++r($lg)
+  .content-section
     padding: 60px 0 80px
-  +r($md)
+    &--with-btn
+      padding-top: 80px
+    &--with-slider-dots
+      padding-bottom: 10px
+
++r($md)
+  .content-section
     padding: 40px 0 50px
-  +r($sm)
+    &--with-btn
+      padding-top: 80px
+    &--with-slider-dots
+      padding-bottom: 0px
+    &__buy-btn
+      padding: 28px 20px
+      span
+        font-size: 21px
+      .ico
+        font-size: 14px
++r($sm)
+  .content-section
     padding: 20px 0 30px
+    &--with-btn
+      padding-top: 60px
+    &--with-slider-dots
+      padding-bottom: 0px
+    &__cta-section
+      .container
+        padding-right: 0
+    &__buy-btn
+      padding: 21px 20px
+      justify-content: flex-start
+      span
+        font-size: 15px
+      .ico
+        font-size: 10px
 
 // section triangle
 .sec-tr

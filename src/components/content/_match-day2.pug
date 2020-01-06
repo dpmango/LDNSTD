@@ -1,0 +1,41 @@
+// content section
+.content-section.content-section--with-slider-dots.bg-gray.sec-tr.sec-tr--cyan
+  .container
+    .row
+      .col-12.col-md-6
+      .col-12.col-md-6.col-lg-5.offset-lg-1
+        h2.h2-title.c-blue(data-aos="fade-up") Tour highlights
+    .row.mt-2.mt-md-0
+      .col-12.col-md-6.col-lg-5.offset-lg-1.order-md-2
+        .lines-of-text(data-aos="fade-up")
+          p Panoramic views into the stadium
+          p Exploring the home changing room
+          p Hospitality restaurant
+          p Visit the indoor running track
+          p Walk down the players' tunnel
+          p See the view from the managers dug out
+          p View exclusive video content
+          p Make your own memories with unique photo opportunities along the route and collect a free personalised certificate at the end.
+
+        .tour-langs
+          p.p-small(data-aos="fade-up") The tour is offered in five languages and is fully accessible throughout.
+          .row.mt-1(data-aos="fade-up")
+            .col-auto
+              img(src="https://www.countryflags.io/gb/flat/48.png")
+            .col-auto
+              img(src="https://www.countryflags.io/fr/flat/48.png")
+            .col-auto
+              img(src="https://www.countryflags.io/de/flat/48.png")
+            .col-auto
+              img(src="https://www.countryflags.io/it/flat/48.png")
+            .col-auto
+              img(src="https://www.countryflags.io/es/flat/48.png")
+
+      .col-12.col-md-6.mt-md-1.order-md-1
+        .swiper-container.swiper-bullets.js-swiper-article
+          .swiper-wrapper
+            each slide in [1,2,3]
+              .swiper-slide
+                .scaler(data-ar="4:3" style="background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_1.jpg)")
+                  img(js-lazy data-src='img/event_card_1.jpg' data-srcset='img/event_card_1@2x.jpg 2x')
+          .swiper-pagination

@@ -107,3 +107,59 @@
         font-size: 15px
 
 
+
+// .lines-of-text
+.lines-of-text
+  p
+    position: relative
+    font-size: 17px
+    font-weight: 600
+    line-height: 1.58
+    margin: 0.5em 0
+    padding: 0 8px
+    max-width: 420px
+    &:first-child
+      margin-top: 0
+    &::after
+      display: inline-block
+      content: ' '
+      position: absolute
+      bottom: -0.3em
+      left: 0
+      right: 0
+      background: white
+      height: 2px
+
++r($lg)
+  .lines-of-text
+    p
+      font-size: 15px
+
++r($sm)
+  .lines-of-text
+    p
+      font-size: 13px
+      margin: 0.4em 0
+      padding: 0 15px
+      max-width: 300px
+      &::after
+        height: 1px
+        bottom: -0.2em
+
+.tour-langs
+  padding: 0 8px
+  margin-top: 35px
+  img
+    margin-bottom: 15px
+
++r($sm)
+  .tour-langs
+    padding: 0 15px
+    margin-top: 30px
+    img
+      max-width: 34px
+
++r(480)
+  .tour-langs
+    img
+      max-width: 28px

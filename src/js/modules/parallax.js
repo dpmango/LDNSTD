@@ -64,22 +64,14 @@
             var scrollPercent100 = scrollPercent / 100;
             var scaleTarget = 1 + scrollPercent100 / element.scalePower;
 
-            // TweenLite.to(element.$image, 0.3, {
-            //   scale: scaleTarget,
-            //   ease: Back.easeOut.config(1.7),
-            // });
             element.$image.css({
               transition: 'transform .1s linear',
               transform: 'scale(' + scaleTarget + ')',
             });
           } else if (bScroll > elementEndPoint) {
-            // TweenLite.to(element.$image, 0.3, {
-            //   scale: element.scalePower,
-            //   ease: Back.easeOut.config(1.7),
-            // });
             element.$image.css({
               transition: 'transform .1s linear',
-              transform: 'scale(' + element.scalePower + ')',
+              transform: 'scale(' + 1.1 + ')',
             });
           } else {
             element.$image.attr('style', '');

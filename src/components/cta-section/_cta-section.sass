@@ -4,7 +4,7 @@
   z-index: 2
   &__wrapper
     background: $colorCyan
-    padding: 95px 0 90px
+    padding: 90px 0 90px
     &--short
       padding: 40px 0
   &__text
@@ -13,7 +13,7 @@
     p
       max-width: 520px
   &__form
-    margin-top: 45px
+    margin-top: 55px
   &__row
     display: flex
     align-items: center
@@ -36,3 +36,23 @@
         &:hover
           text-decoration: none
 
++r($lg)
+  .cta-section
+    &__wrapper
+      padding: 70px 0
+      &--short
+        padding: 40px 0
+    &__form
+      margin-top: 40px
+    &__text
+      p
+        max-width: 480px
+
++r($sm)
+  .cta-section
+    &__wrapper
+      padding: 40px 0
+      &--short
+        padding: 35px 0 60px
+    &__text
+      padding-right: 20px

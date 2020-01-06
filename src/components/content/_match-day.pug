@@ -11,7 +11,13 @@ include ../breadcrumbs/_breadcrumbs
         h1.section-header__title Match day
 
 // content section
-.content-section
+.content-section.content-section--with-btn
+  .content-section__cta-section
+    .container
+      a(href='#').content-section__buy-btn
+        span Make a booking
+        +svgMono('arrow-right')
+
   .container
     h2.h2-title.c-blue(data-aos="fade-up") London Stadium tour
     .row
