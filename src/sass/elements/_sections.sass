@@ -156,6 +156,18 @@
     &::after
       +arr(428, 660, $colorCyan, tr)
 
+// triggered animation
+[data-aos].sec-tr
+  &::after
+    transform: translate3d(15px,0px,0)
+    opacity: 0
+    transition: 0.4s .3s ease-out
+    will-change: transform
+  &.aos-animate
+    &::after
+      opacity: 1
+      transform: none
+
 +r($md)
   .sec-tr
     &--red, &--cyan
