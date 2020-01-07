@@ -9,3 +9,48 @@ include ../breadcrumbs/_breadcrumbs
         .section-header__breadcrumbs
           +breadcrumbs(['Home', 'Stadium tours', 'Explore Functions'])
         h1.section-header__title Explore Functions
+
+// content section
+.content-section
+  .container
+    h2.h2-title.c-blue(data-aos="fade-up") Host an event with us
+    .row
+      .col-12.col-md-6.col-xl-5
+        .wysiwyg(data-aos="fade-up")
+          blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+      .col-12.col-md-6.col-xl-5.offset-xl-2.mt-md-2
+        .epack
+          .epack__banner(data-aos="fade-up")
+            .epack__banner-text Back to school <span>DDR Packages</span>
+            .epack__banner-price
+              .epack__banner-pricemain £<span>70</span>.00
+              .epack__banner-pricesub + VAT / PER PERSON
+
+          .epack__box(data-aos="fade")
+            .epack__box-caption
+              | Available from September ~ November 2019
+              br
+              | Minimum numbers of 100 apply
+            .epack__box-text
+              p It’s time to sharpen your pencils, dig out your satchel and find out who will be top of the class with the London Stadium’s ‘Back to School’ DDR package.
+              p
+                strong Room hire 9am – 5pm
+                br
+                strong Arrival tea and coffee with pastries
+                br
+                strong Mid-morning tea and coffee with biscuits
+                br
+                strong Dinner lady’s buffet, a selection of sandwiches and three finger food items
+                br
+                strong Mid-afternoon tea and coffee with ‘Teacher’s Pet’ treat
+                br
+                strong Water served throughout the day
+                br
+                strong Retro table sweets
+                br
+                strong After school Stadium Tour
+            a(href='#').epack__box-link
+              span Find our more
+              +svgMono('arrow-right')

@@ -228,3 +228,104 @@
   .tour-langs
     img
       max-width: 28px
+
+
+// event package
+.epack
+  &__banner
+    display: flex
+    align-items: center
+    padding: 22px 15px 22px 30px
+    border: 4px solid $colorRed
+    color: $colorRed
+  &__banner-text
+    font-size: 25px
+    font-weight: 700
+    line-height: 1.16
+    span
+      display: block
+      font-weight: 500
+  &__banner-price
+    margin-left: auto
+  &__banner-pricemain
+    font-size: 19px
+    letter-spacing: em(-.49, 19)
+    font-weight: 700
+    span
+      font-size: 39px
+      letter-spacing: em(-1, 39)
+  &__banner-pricesub
+    font-size: 15px
+    font-weight: 600
+    letter-spacing: em(0.45, 15)
+  &__box
+    background: $colorGrayBG
+    padding: 20px 30px 40px
+  &__box-caption
+    font-size: 17px
+    font-weight: 600
+    line-height: 1.58
+  &__box-text
+    p
+      font-size: 15px
+      line-height: 1.66
+    strong, b, bold
+      font-weight: 600
+  &__box-link
+    display: flex
+    align-items: center
+    margin-top: 15px
+    color: $colorRed
+    span
+      display: inline-block
+      margin-right: 0.5em
+      font-size: 19px
+      font-weight: 600
+    .ico
+      font-size: 12px
+      transform: translate(0, 0px)
+      will-change: transform
+      transition: transform .25s $ease
+    &:hover
+      .ico
+        transform: translate(5px, 0px)
+
+
++r($lg)
+  .epack
+    &__banner
+      padding-left: 15px
+      padding-right: 12px
+    &__banner-text
+      font-size: 19px
+    &__banner-pricemain
+      font-size: 17px
+      span
+        font-size: 28px
+    &__banner-pricesub
+      font-size: 12px
+    &__box
+      padding-left: 15px
+      padding-right: 15px
+      padding-bottom: 30px
+
++r($sm)
+  .epack
+    &__banner-text
+      font-size: 15px
+    &__banner-pricemain
+      font-size: 12px
+      span
+        font-size: 23px
+    &__banner-pricesub
+      font-size: 9px
+    &__box-caption
+      font-size: 15px
+    &__box-text
+      p
+        font-size: 13px
+    &__box-link
+      span
+        font-size: 15px
+      .ico
+        font-size: 9px

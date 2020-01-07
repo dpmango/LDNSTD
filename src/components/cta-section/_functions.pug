@@ -7,8 +7,8 @@
           .h2-title.c-blue We’re here to help
           p.p-main Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua.
         form(action="#" js-validate data-aos="fade-up").cta-section__form
-          .row
-            .col-12.col-md-5
+          .row.align-items-end
+            .col-12.col-md-6.col-xl-5
               .ui-group
                 label What kind of event do you want to organise?
                 select(js-select required placeholder="Please select")
@@ -18,21 +18,21 @@
                   option Event type 3
                   option Event type 4
                   option Event type 5
-            .col-12.col-md-4
+            .col-12.col-md-6.col-xl-4
               .ui-group
                 label For how many people?
                 .row
-                  .col-12.col-md-6
+                  .col-6
                     select(js-select required placeholder="Minimum")
                       option(selected disabled) Minimum
                       each num in [1,2,3,4,5,6,7,8,9,10]
                         option= num
-                  .col-12.col-md-6
+                  .col-6
                     select(js-select required placeholder="Maximum")
                       option(selected disabled) Maximum
                       each num in [1,2,3,4,5,6,7,8,9,10]
                         option= num
-            .col-12.col-md-3
+            .col-12.col-xl-3
               .ui-group
                 label
                 button(type="submit").btn.btn-blue.btn--block Search
