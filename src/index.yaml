@@ -22,7 +22,7 @@ PageList:
   - file: match-day.html
     ready: 90
   - file: book-tour.html
-    ready: 60
+    ready: 90
   - file: functions.html
     ready: 60
   - file: ui.html
