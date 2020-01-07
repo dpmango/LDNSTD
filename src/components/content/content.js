@@ -111,9 +111,9 @@
       _document.on('click', '.js-content-tabs a', function(e) {
         var $link = $(this);
         var $li = $link.parent();
-        var $container = $link.closest('.contentTabs');
+        var $container = $link.closest('.content-tabs');
         var targetTabId = $link.data('target-tab');
-        var $targetTab = $container.find('.contentTabs__tab[data-tab="' + targetTabId + '"]');
+        var $targetTab = $container.find('.content-tabs__tab[data-tab="' + targetTabId + '"]');
 
         if ($targetTab.length === 0) return;
 

@@ -107,6 +107,61 @@
         font-size: 15px
 
 
+// content tabs
+.content-tabs
+  &__navigation
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+    min-width: 1px
+    overflow-x: auto
+    overflow-y: hidden
+    li
+      display: inline-block
+      background: $colorGrayBG
+      &:last-child
+        margin-right: 0
+      &.is-active
+        background: transparent
+        a
+          // active styles
+          &:hover
+            color: $colorBlue
+    a
+      position: relative
+      width: 100%
+      display: inline-block
+      color: $colorBlue
+      padding: 25px 20px
+      font-size: 21px
+      font-weight: 600
+      transition: color .25s $ease
+      &:hover
+        color: $colorCyan
+
+  // tabs container
+  &__tabs
+    margin-top: 40px
+  &__tab
+    // default state for tab
+    display: none
+    &.is-active
+      // used for setting initial state
+      // (also could be set through inline styles)
+      display: block
+
++r($sm)
+  .content-tabs
+    &__navigation
+      margin-left: -15px
+      margin-right: -15px
+      a
+        font-size: 15px
+        padding: 15px 5px
+    &__tabs
+      margin-top: 20px
+
 
 // .lines-of-text
 .lines-of-text
