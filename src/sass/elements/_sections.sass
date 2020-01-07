@@ -224,6 +224,12 @@
   &--cyan
     &::after
       +arr(428, 660, $colorCyan, tr)
+  &--cyan-br
+    &::after
+      top: auto
+      bottom: 0
+      +arr(428, 660, $colorCyan, br)
+
 
 // triggered animation
 [data-aos].sec-tr
@@ -237,12 +243,22 @@
       opacity: 1
       transform: none
 
++r($lg)
+  .sec-tr
+    &--cyan-br
+      &::after
+        border-left-width: 300px
+        border-bottom-width: 462px
+
 +r($md)
   .sec-tr
     &--red, &--cyan
       &::after
         border-right-width: 300px
         border-bottom-width: 462px
+    &--cyan-br
+      &::after
+        display: none
 
 +r($sm)
   .sec-tr
