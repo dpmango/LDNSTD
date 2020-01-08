@@ -35,7 +35,7 @@
 
           if (stopWatching === null || !stopWatching) {
             // reset from previous resive
-            $el.css({ 'margin-left': 0, 'margin-right': 0 });
+            $el.css({ margin: 0 });
 
             // get position of element to window
             var $elPosLeft = $el[0].getBoundingClientRect().left;
@@ -60,6 +60,18 @@
               if (keepContainer) {
                 $el.css({ 'padding-right': setMarginPx * -1 });
               }
+            }
+
+            // should stick to target element
+            var fitYElement = $el.data('fit-y-element');
+
+            if (fitYElement) {
+              var $parent = $el.closest(fitYElement);
+              var parentPos = $parent[0].getBoundingClientRect();
+              var elementPos = $el[0].getBoundingClientRect();
+              var parentHeight = $parent.outerHeight();
+
+              $el.css({ 'margin-top': parentPos.top - elementPos.top, height: parentHeight });
             }
           } else {
             $el.attr('style', '');

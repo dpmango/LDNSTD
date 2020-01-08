@@ -120,7 +120,6 @@
       this.data.header.isFixedVisible = false;
     },
     scrollHeaderDebouce: function() {
-      console.log('deb');
       // always show header after user stop scrolling
       if (this.data.header.container !== undefined) {
         this.makeHeaderVisible();

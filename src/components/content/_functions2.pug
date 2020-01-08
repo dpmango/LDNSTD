@@ -1,24 +1,15 @@
-
-// content section
-//- .content-section
-//-   .container
-//-     .row
-//-       .col-12.col-md-5
-//-         h2.h2-title.c-blue(data-aos="fade-up") We support a range of events
-//-         p.p-big(data-aos="fade-up") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
 // CONTENT
 .content
   .container
     // Article
-    article.article
+    article.article.pb-2
       .article__text(data-aos="fade-up")
         h2.h2-title.c-blue We support a range of events
         p.p-big Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 // content nav
 .content-tabs
-  .content-nav.js-sticky-nav
+  .content-nav.js-sticky-nav(data-aos="fade")
     .content-nav__wrapper
       .container
         ul.content-nav__list.js-content-navigation
@@ -38,23 +29,18 @@
   // content section
   .content-section.bg-gray.js-content-navsection(data-nav-section="1")
     .container
-      h2.h2-title.c-blue(data-aos="fade-up") New for 2020
       .row
-        .col-12.col-md-6.offset-lg-1.order-md-2
-          .scaler(data-ar="4:3" style="background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_1.jpg)")
-            img(js-lazy data-src='img/event_card_1.jpg' data-srcset='img/event_card_1@2x.jpg 2x')
-
-        .col-12.col-md-6.col-lg-5.order-md-1.mt-md-2
+        .col-12.col-md-6
           .wysiwyg(data-aos="fade-up")
-            blockquote We are delighted that we can now offer guided match day tours so come and take a behind the scenes view of London Stadium only hours before the players battle it out on the pitch.
-            p This is a different style of tour as this tour will be guided in small groups and everyone on the tour will be accompanied by one of our exceptional Experience Makers. Our guides are full of character, knowledge and stories about West Ham United, athletics and the incredible feat of architecture that is the London Stadium, so you will be entertained on your journey through the stadium.
+            p The venue truly comes to life for evening events. Consider starting your evening with a short tour visiting the changing rooms, player's tunnel and dugout before drinks are taken with either views of the City of London or the stadium bowl prior to dinner. Whether entertaining clients, staff, or celebrating the end of a school or university term, everyone will be wowed by the stadium facilities and history.
+            p Be it an awards, celebration or fundraiser dinner; a formal, fun or themed event; a prom or university ball, we have the space for you. In addition, we can offer full event management so just talk to us about your vision and we will create it. We can source anything from table centres to lighting and theming to entertainment.
+            p We know that you take your food and wine very seriously and so do we. We have created menus that we believe you will like, but if there is anything specific that you require, then please let us know and we will arrange for the chef to create a menu especially for you.
+            p Contact the team on 020 8522 6139 for details of our dinner packages.
 
-            p The popular areas of this tour will still be visited, but the excitement of a match day will be in the air.
-              br
-              | To book this exclusive access tour, <a href="#">click here</a>.
-
-            p <strong>Please note:</strong> match day tours are sometimes subject to route changes.
-
+        .content-section__free-img-container.col-12.col-md-6.col-lg-5.offset-lg-1.mt-md-2
+          .content-section__free-img.js-stick-to-window(data-position="right" data-stop="<768" data-fit-y-element=".content-section")
+            .scaler(js-scaler-mobile data-ar-768="1:1" style="background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_1.jpg)")
+              img(js-lazy data-src='img/event_card_1.jpg' data-srcset='img/event_card_1@2x.jpg 2x')
 
   // content section
   .content-section.js-content-navsection(data-nav-section="2")

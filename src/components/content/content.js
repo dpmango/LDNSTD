@@ -5,11 +5,22 @@
   APP.Components.Content = {
     data: {
       nav: {
-        navListHeight: 66,
         navSections: [],
         navTops: [],
         anchors: [],
       },
+    },
+    getNavListHeight: function() {
+      var wWidth = window.innerWidth;
+      var h;
+      if (wWidth > 1199) {
+        h = 64;
+      } else if (wWidth > 991) {
+        h = 61;
+      } else {
+        h = 57;
+      }
+      return h;
     },
     init: function(fromPjax) {
       this.getSections();
@@ -67,7 +78,9 @@
 
         // different offset if header is visible or not
         var contentNavigationOffset =
-          direction === 'next' ? _this.data.nav.navListHeight : _this.data.nav.navListHeight + 80;
+          direction === 'next'
+            ? _this.getNavListHeight()
+            : _this.getNavListHeight() + APP.Components.Header.data.header.bottomPoint;
         var topTarget = $targetSection.offset().top - contentNavigationOffset;
         $('body, html').animate({ scrollTop: topTarget }, 1000);
         // TweenLite.to(window, 1, {
@@ -137,8 +150,8 @@
       var cur = this.data.nav.navSections.map(function(idx, el) {
         var elTop = _this.data.nav.navTops[idx];
         var offset = APP.Components.Header.data.isFixedVisible
-          ? _this.data.nav.navListHeight + 1
-          : _this.data.nav.navListHeight + 80 + 1;
+          ? _this.getNavListHeight() + 1
+          : _this.getNavListHeight() + APP.Components.Header.data.header.bottomPoint + 1;
 
         if (elTop <= scroll.y + offset) {
           return this;
