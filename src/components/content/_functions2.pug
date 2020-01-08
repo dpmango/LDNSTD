@@ -64,16 +64,19 @@
               li Marquee options available
               li Some rooms over-looking the bowl of the stadium
               li Other rooms overlooking the City of London
+            a(href='#').btn.btn-primary.mt-2
+              span Explore our spaces
+              +svgMono('arrow-right')
 
   // content section
   .content-section.bg-gray.js-content-navsection(data-nav-section="3")
     .container
       .row
-        .col-12.col-md-6.offset-lg-1.order-md-2
+        .col-12.col-md-6
           .scaler(data-ar="4:3" style="background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_1.jpg)")
             img(js-lazy data-src='img/event_card_1.jpg' data-srcset='img/event_card_1@2x.jpg 2x')
 
-        .col-12.col-md-6.col-lg-5.order-md-1.mt-md-2
+        .col-12.col-md-6.col-lg-5.offset-lg-1.mt-md-2
           .wysiwyg(data-aos="fade-up")
             h3 Creative food and drink
             p
@@ -87,6 +90,10 @@
               li Great presentation
               li Bespoke menus available
               li A great team with the personal touch
+            a(href='#').btn.btn-primary.mt-2
+              span Explore Food & Drink
+              +svgMono('arrow-right')
+
   // content section
   .content-section.js-content-navsection(data-nav-section="4")
     .container
@@ -109,3 +116,6 @@
               li Ingenious photography
               li Props and themes
               li Whatever you want – we will source it
+            a(href='#').btn.btn-primary.mt-2
+              span Our Suppliers
+              +svgMono('arrow-right')
