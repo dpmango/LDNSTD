@@ -1,4 +1,5 @@
 include ../breadcrumbs/_breadcrumbs
+include ../../pug/schema/_mixins
 
 // CONTENT
 .content.bg-gray
@@ -9,9 +10,16 @@ include ../breadcrumbs/_breadcrumbs
           +breadcrumbs(['Home', 'Our news', 'Headline goes here'], 'blue')
 
         // Article
-        article.article
+        article.article(itemscope itemtype="http://schema.org/NewsArticle")
+          // shema.org hidden
+          link(itemprop="mainEntityOfPage" href="https://ldnstd.surge.com/article.html")
+          meta(itemprop="inLanguage" content="en")
+          meta(itemprop="dateModified" content="2020-01-04T09:04:20+02:00")
+          +metaPublisher
+          +metaAuthor
+
           // article slide
-          .article__slider
+          .article__slider(itemprop="image" content="img/article_image.jpg")
             .swiper-container.swiper-bullets.js-swiper-article
               .swiper-wrapper
                 .swiper-slide
@@ -38,10 +46,10 @@ include ../breadcrumbs/_breadcrumbs
 
           .row
             .col-12.col-md-10.col-lg-9.offset-md-1
-              .article__timestamp(data-aos="fade-up") 30 November 2019
-              h1.article__title(data-aos="fade-up") Headline goes here and can take up to two lines
+              .article__timestamp(data-aos="fade-up" itemprop="datePublished") 30 November 2019
+              h1.article__title(data-aos="fade-up" itemprop="name headline") Headline goes here and can take up to two lines
 
-          .row.align-items-md-end
+          .row.align-items-md-end(itemprop="articleBody")
             .col-12.col-md-6.offset-md-1
               .wysiwyg(data-aos="fade-up")
                 blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

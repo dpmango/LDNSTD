@@ -32,12 +32,12 @@ include ../../pug/schema/_mixins
       // NEWS GRID
       .news-list__grid(itemscope itemtype="http://schema.org/ItemList")
         // schema.org hidden
-        link(itemprop="mainEntityOfPage" href="https://dragons-team.surge.com/news.html")
+        link(itemprop="mainEntityOfPage" href="https://ldnstd.surge.com/news.html")
         meta(name="itemListOrder" content="Descending")
         .row
           .col-12
             // news card (wide)
-            a(href="#" itemscope itemprop="itemListElement" itemtype="http://schema.org/NewsArticle").news-card.news-card--wide
+            a(href="article.html" itemscope itemprop="itemListElement" itemtype="http://schema.org/NewsArticle").news-card.news-card--wide
               meta(itemprop="url mainEntityOfPage" content="news-article.html")
               meta(itemprop="position" content="1")
               meta(itemprop="dateModified" content="2020-01-04T09:04:20+02:00")
@@ -56,7 +56,7 @@ include ../../pug/schema/_mixins
           each card, idx in [1,2]
             .col-12.col-md-6
               // news card
-              a(href="#" itemscope itemprop="itemListElement" itemtype="http://schema.org/NewsArticle").news-card
+              a(href="article.html" itemscope itemprop="itemListElement" itemtype="http://schema.org/NewsArticle").news-card
                 meta(itemprop="url mainEntityOfPage" content="news-article.html")
                 meta(itemprop="position" content="1")
                 meta(itemprop="dateModified" content="2020-01-04T09:04:20+02:00")
@@ -75,7 +75,7 @@ include ../../pug/schema/_mixins
           each card in [1,2,3]
             .col-12.col-md-6.col-lg-4
               // news card
-              a(href="#" itemscope itemprop="itemListElement" itemtype="http://schema.org/NewsArticle").news-card.news-card--slide
+              a(href="article.html" itemscope itemprop="itemListElement" itemtype="http://schema.org/NewsArticle").news-card.news-card--slide
                 meta(itemprop="url mainEntityOfPage" content="news-article.html")
                 meta(itemprop="position" content="1")
                 meta(itemprop="dateModified" content="2020-01-04T09:04:20+02:00")
@@ -94,7 +94,7 @@ include ../../pug/schema/_mixins
           each card in [1,2]
             .col-12.col-md-6
               // news card
-              a(href="#" itemscope itemprop="itemListElement" itemtype="http://schema.org/NewsArticle").news-card
+              a(href="article.html" itemscope itemprop="itemListElement" itemtype="http://schema.org/NewsArticle").news-card
                 meta(itemprop="url mainEntityOfPage" content="news-article.html")
                 meta(itemprop="position" content="1")
                 meta(itemprop="dateModified" content="2020-01-04T09:04:20+02:00")
