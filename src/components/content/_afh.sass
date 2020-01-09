@@ -1,0 +1,75 @@
+// article-fixed-header
+.afh
+  position: fixed
+  top: 85px
+  left: 0
+  right: 0
+  z-index: 8
+  background: $colorCyan
+  color: white
+  transform: translate3d(0px,-85px,0)
+  opacity: 0
+  pointer-events: none
+  transition: .25s $ease
+  .container
+    display: flex
+  &__heading
+    margin: auto 0
+    padding: 1rem 0
+  &__navigation
+    margin-left: auto
+    flex: 0 0 auto
+    display: flex
+    transform: translate(calc( ((100vw - 1280px) / 2) + 40px), 0)
+  &__btn
+    min-size: 64px
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    transition: background .25s $ease
+    .ico
+      font-size: 12px
+    &--next
+      background: white
+      color: $fontColor
+      &:hover
+        background: rgba(white, .75)
+    &--prev
+      background: $colorCyan
+      color: $fontColor
+      .ico
+        transform: rotate(180deg)
+      &:hover
+        background: rgba(white, .25)
+
++r(1280)
+  .afh
+    &__navigation
+      transform: translate(40px, 0)
++r($lg)
+  .afh
+    &__heading
+      // no need as we have fixed cta btn covering height of logo
+      // padding-left: 80px
+    &__btn
+      min-size: 50px
+      .ico
+        font-size: 11px
+
++r($sm)
+  .afh
+    top: 72px
+    transform: translate3d(0px,-72px,0)
+    &__navigation
+      transform: translate(15px, 0)
+    &__btn
+      min-size: 40px
+      .ico
+        font-size: 10px
+
+body.is-header-fixed-visible
+  .afh.is-visible
+    transform: translate3d(0,0,0) !important
+    opacity: 1
+    pointer-events: all

@@ -67,6 +67,7 @@
 
             if (fitYElement) {
               var $parent = $el.closest(fitYElement);
+              if ($parent.length === 0) return;
               var parentPos = $parent[0].getBoundingClientRect();
               var elementPos = $el[0].getBoundingClientRect();
               var parentHeight = $parent.outerHeight();
