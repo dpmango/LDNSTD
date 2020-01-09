@@ -1,4 +1,5 @@
 include ../breadcrumbs/_breadcrumbs
+include ../../pug/schema/_mixins
 
 // EVENTS
 .events.sec-mt-fold-t
@@ -39,10 +40,6 @@ include ../breadcrumbs/_breadcrumbs
         // schema.org hidden
         link(itemprop="mainEntityOfPage" href="https://dragons-team.surge.com/whatson.html")
         meta(name="itemListOrder" content="Descending")
-        mixin metaLocation
-          span(itemprop="location" itemscope itemtype="https://schema.org/Place")
-            meta(itemprop="name" content="London Stadium")
-            meta(itemprop="address" content="Queen Elizabeth Olympic Park, London E20 2ST, United Kingdom")
         mixin eventCard_1(idx)
           // event card
           .event-card(itemscope itemprop="itemListElement" itemtype="http://schema.org/Event")

@@ -1,0 +1,19 @@
+mixin metaPublisher
+  span(itemtype="http://schema.org/Organization" itemscope="itemscope" itemprop="publisher")
+    link(itemprop="url" href="https://www.london-stadium.com/")
+    span(itemprop="name" content="London Stadium")
+    span(itemprop="logo" itemscope itemtype="https://schema.org/ImageObject")
+      link(itemprop="url" href="/sites/londonstadium.com/themes/londre/images/logo-london-stadium-x2.png")
+      meta(itemprop="width" content="100")
+      meta( temprop="height" content="96")
+    meta(itemprop="sameAs" content="https://www.facebook.com/londonstadium")
+    meta(itemprop="sameAs" content="https://twitter.com/LondonStadium")
+    meta(itemprop="sameAs" content="https://www.youtube.com/channel/UCidtrfq4ZOXaNif4qRvrwLg")
+    meta(itemprop="sameAs" content="https://www.instagram.com/londonstadium/")
+    meta(itemprop="sameAs" content="https://www.linkedin.com/company/london-stadium")
+
+
+mixin metaLocation
+  span(itemprop="location" itemscope itemtype="https://schema.org/Place")
+    meta(itemprop="name" content="London Stadium")
+    meta(itemprop="address" content="Queen Elizabeth Olympic Park, London E20 2ST, United Kingdom")

@@ -1,4 +1,5 @@
 include ../breadcrumbs/_breadcrumbs
+include ../../pug/schema/_mixins
 
 // NEWS
 .news.sec-mt-fold-t
@@ -29,59 +30,74 @@ include ../breadcrumbs/_breadcrumbs
   .news-list
     .container
       // NEWS GRID
-      .news-list__grid
+      .news-list__grid(itemscope itemtype="http://schema.org/ItemList")
+        // schema.org hidden
+        link(itemprop="mainEntityOfPage" href="https://dragons-team.surge.com/news.html")
+        meta(name="itemListOrder" content="Descending")
         .row
           .col-12
             // news card (wide)
-            a(href="#").news-card.news-card--wide
-              .news-card__image
+            a(href="#" itemscope itemprop="itemListElement" itemtype="http://schema.org/NewsArticle").news-card.news-card--wide
+              meta(itemprop="url mainEntityOfPage" content="news-article.html")
+              meta(itemprop="position" content="1")
+              +metaPublisher
+              .news-card__image(itemprop="image" content="img/event_card_4.jpg")
                 .scaler(style="padding-bottom: "+ (370/370) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_4.jpg)")
                   img(js-lazy data-src='img/event_card_4.jpg' data-srcset='img/event_card_4@2x.jpg 2x')
               .news-card__content(data-aos="fade")
                 .news-card__tag Sports
-                .news-card__timestamp 30 November 2019
-                .news-card__title Headline goes here
-                .news-card__short
+                .news-card__timestamp(itemprop="datePublished") 30 November 2019
+                .news-card__title(itemprop="name headline") Headline goes here
+                .news-card__short(itemprop="description")
                   p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua.
 
-          each card in [1,2]
+          each card, idx in [1,2]
             .col-12.col-md-6
               // news card
-              a(href="#").news-card
-                .news-card__image
+              a(href="#" itemscope itemprop="itemListElement" itemtype="http://schema.org/NewsArticle").news-card
+                meta(itemprop="url mainEntityOfPage" content="news-article.html")
+                meta(itemprop="position" content="1")
+                +metaPublisher
+                .news-card__image(itemprop="image" content="img/event_card_4.jpg")
                   .scaler(js-scaler-mobile data-ar-768="370/370" style="padding-bottom: "+ (251/370) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_4.jpg)")
                     img(js-lazy data-src='img/event_card_4.jpg' data-srcset='img/event_card_4@2x.jpg 2x')
                 .news-card__content(data-aos="fade")
                   .news-card__tag Sports
-                  .news-card__timestamp 30 November 2019
-                  .news-card__title Headline goes here
-                  .news-card__short
+                  .news-card__timestamp(itemprop="datePublished") 30 November 2019
+                  .news-card__title(itemprop="name headline") Headline goes here
+                  .news-card__short(itemprop="description")
                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua.
 
           each card in [1,2,3]
             .col-12.col-md-6.col-lg-4
               // news card
-              a(href="#").news-card.news-card--slide
-                .news-card__image
+              a(href="#" itemscope itemprop="itemListElement" itemtype="http://schema.org/NewsArticle").news-card.news-card--slide
+                meta(itemprop="url mainEntityOfPage" content="news-article.html")
+                meta(itemprop="position" content="1")
+                +metaPublisher
+                .news-card__image(itemprop="image" content="img/event_card_4.jpg")
                   .scaler(js-scaler-mobile data-ar-768="370/370" style="padding-bottom: "+ (251/370) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_4.jpg)")
                     img(js-lazy data-src='img/event_card_4.jpg' data-srcset='img/event_card_4@2x.jpg 2x')
                 .news-card__content(data-aos="fade")
                   .news-card__tag Sports
-                  .news-card__timestamp 30 November 2019
-                  .news-card__title Headline goes here
-                  .news-card__short
+                  .news-card__timestamp(itemprop="datePublished") 30 November 2019
+                  .news-card__title(itemprop="name headline") Headline goes here
+                  .news-card__short(itemprop="description")
                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua.
 
           each card in [1,2]
             .col-12.col-md-6
               // news card
-              a(href="#").news-card
-                .news-card__image
+              a(href="#" itemscope itemprop="itemListElement" itemtype="http://schema.org/NewsArticle").news-card
+                meta(itemprop="url mainEntityOfPage" content="news-article.html")
+                meta(itemprop="position" content="1")
+                +metaPublisher
+                .news-card__image(itemprop="image" content="img/event_card_4.jpg")
                   .scaler(js-scaler-mobile data-ar-768="370/370" style="padding-bottom: "+ (251/370) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_4.jpg)")
                     img(js-lazy data-src='img/event_card_4.jpg' data-srcset='img/event_card_4@2x.jpg 2x')
                 .news-card__content(data-aos="fade")
                   .news-card__tag Sports
-                  .news-card__timestamp 30 November 2019
-                  .news-card__title Headline goes here
-                  .news-card__short
+                  .news-card__timestamp(itemprop="datePublished") 30 November 2019
+                  .news-card__title(itemprop="name headline") Headline goes here
+                  .news-card__short(itemprop="description")
                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua.
