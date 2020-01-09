@@ -1,10 +1,14 @@
 mixin breadcrumbs(crumbs, modifier)
   // BREADCRUMBS
   .breadcrumbs(class=modifier ? "breadcrumbs--" + modifier : "")
-    ul.breadcrumbs__list
+    ul.breadcrumbs__list(itemscope itemtype="http://schema.org/BreadcrumbList")
       each crumb, index in crumbs
-        li
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
           if (index !== crumbs.length - 1)
-            a(href="#")!= crumb
+            a(href="#" itemprop="item")!= crumb
+            meta(itemprop="name" content=crumb)
           else
             span!= crumb
+            meta(itemprop="item" content="https://ldnstd.surge.sh/curpage-url.html")
+            meta(itemprop="name" content=crumb)
+          meta(itemprop="position" content=index + 1)
