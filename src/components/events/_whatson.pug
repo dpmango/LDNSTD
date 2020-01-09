@@ -35,90 +35,109 @@ include ../breadcrumbs/_breadcrumbs
           a(href="#").btn.btn-primary See all West Ham Fixtures
 
       // EVENTS GRID
-      .events-list__grid
-        mixin eventCard_1
+      .events-list__grid(itemscope itemtype="http://schema.org/ItemList")
+        // schema.org hidden
+        link(itemprop="mainEntityOfPage" href="https://dragons-team.surge.com/whatson.html")
+        meta(name="itemListOrder" content="Descending")
+        mixin metaLocation
+          span(itemprop="location" itemscope itemtype="https://schema.org/Place")
+            meta(itemprop="name" content="London Stadium")
+            meta(itemprop="address" content="Queen Elizabeth Olympic Park, London E20 2ST, United Kingdom")
+        mixin eventCard_1(idx)
           // event card
-          .event-card
-            .event-card__image
+          .event-card(itemscope itemprop="itemListElement" itemtype="http://schema.org/Event")
+            // metadata
+            +metaLocation
+            meta(itemprop="position" content=idx)
+            .event-card__image(itemprop="image" content="img/event_card_1.jpg")
               .scaler(style="padding-bottom: "+ (251/370) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_1.jpg)")
                 img(js-lazy data-src='img/event_card_1.jpg' data-srcset='img/event_card_1@2x.jpg 2x')
-            .event-card__date
+            .event-card__date(itemprop="startDate" content="2019-09-20T12:00:00+00:00")
               span.event-card__date-day 20
               span.event-card__date-month Sept
             .event-card__content(data-aos="fade")
               .event-card__timestamp 30 November 2019 <br/>Friday – 8:30pm
-              .event-card__name Guns ’n’ Roses <br/>World Tour 2020
+              .event-card__name(itemprop="name") Guns ’n’ Roses <br/>World Tour 2020
             .event-card__cta(data-aos="fade")
               a(href="#").event-card__book Book now
-              a(href="#").event-card__more More info
-        mixin eventCard_2
+              a(href="#" itemprop="url").event-card__more More info
+        mixin eventCard_2(idx)
           // event card
-          .event-card
-            .event-card__image
+          .event-card(itemscope itemprop="itemListElement" itemtype="http://schema.org/Event")
+            // metadata
+            +metaLocation
+            meta(itemprop="position" content=idx)
+            .event-card__image(itemprop="image" content="img/event_card_2.jpg")
               .scaler(style="padding-bottom: "+ (251/370) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_2.jpg)")
                 img(js-lazy data-src='img/event_card_2.jpg' data-srcset='img/event_card_2@2x.jpg 2x')
-            .event-card__date
+            .event-card__date(itemprop="startDate" content="2019-09-20T12:00:00+00:00")
               span.event-card__date-month Nov
             .event-card__content(data-aos="fade")
               .event-card__timestamp Throughout November<br/>Check for dates
-              .event-card__name Stadium Tour <br/>Experiences
+              .event-card__name(itemprop="name") Stadium Tour <br/>Experiences
             .event-card__cta(data-aos="fade")
               a(href="#").event-card__book Book now
-              a(href="#").event-card__more More info
-        mixin eventCard_3
+              a(href="#" itemprop="url").event-card__more More info
+        mixin eventCard_3(idx)
           // event card
-          .event-card
-            .event-card__image
+          .event-card(itemscope itemprop="itemListElement" itemtype="http://schema.org/Event")
+            // metadata
+            +metaLocation
+            meta(itemprop="position" content=idx)
+            .event-card__image(itemprop="image" content="img/event_card_3.jpg")
               .scaler(style="padding-bottom: "+ (251/370) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_3.jpg)")
                 img(js-lazy data-src='img/event_card_3.jpg' data-srcset='img/event_card_3@2x.jpg 2x')
-            .event-card__date
+            .event-card__date(itemprop="startDate" content="2019-09-20T12:00:00+00:00")
               span.event-card__date-day 27
               span.event-card__date-month Sept
             .event-card__content(data-aos="fade")
               .event-card__timestamp 30 November 2019<br/>Friday – 8:30pm
-              .event-card__name Saracens vs<br/>Leicester
+              .event-card__name(itemprop="name") Saracens vs<br/>Leicester
             .event-card__cta(data-aos="fade")
               a(href="#").event-card__book Book now
-              a(href="#").event-card__more More info
-        mixin eventCard_4
+              a(href="#" itemprop="url").event-card__more More info
+        mixin eventCard_4(idx)
           // event card
-          .event-card
-            .event-card__image
+          .event-card(itemscope itemprop="itemListElement" itemtype="http://schema.org/Event")
+            // metadata
+            +metaLocation
+            meta(itemprop="position" content=idx)
+            .event-card__image(itemprop="image" content="img/event_card_4.jpg")
               .scaler(style="padding-bottom: "+ (251/370) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_4.jpg)")
                 img(js-lazy data-src='img/event_card_4.jpg' data-srcset='img/event_card_4@2x.jpg 2x')
-            .event-card__date
+            .event-card__date(itemprop="startDate" content="2019-09-20T12:00:00+00:00")
               span.event-card__date-month Nov
             .event-card__content(data-aos="fade")
               .event-card__timestamp Throughout November<br/>Check for dates
-              .event-card__name Stadium Tour <br/>Experiences
+              .event-card__name(itemprop="name") Stadium Tour <br/>Experiences
             .event-card__cta(data-aos="fade")
               a(href="#").event-card__book Book now
-              a(href="#").event-card__more More info
+              a(href="#" itemprop="url").event-card__more More info
 
         .row
           .col-12.col-sm-6.col-lg-4
             .event-card-date(data-aos="fade")
               .event-card-date__title November <br/> 2019
           .col-12.col-sm-6.col-lg-4
-            +eventCard_1
+            +eventCard_1(1)
           .col-12.col-sm-6.col-lg-4
-            +eventCard_2
+            +eventCard_2(2)
           .col-12.col-sm-6.col-lg-4
-            +eventCard_3
+            +eventCard_3(3)
           .col-12.col-sm-6.col-lg-4
-            +eventCard_1
+            +eventCard_1(4)
           .col-12.col-sm-6.col-lg-4
-            +eventCard_4
+            +eventCard_4(5)
           .col-12.col-sm-6.col-lg-4
-            +eventCard_4
+            +eventCard_4(6)
           .col-12.col-sm-6.col-lg-4
-            +eventCard_3
+            +eventCard_3(7)
           .col-12.col-sm-6.col-lg-4
             .event-card-date(data-aos="fade")
               .event-card-date__title December <br/> 2019
           .col-12.col-sm-6.col-lg-4
-            +eventCard_3
+            +eventCard_3(8)
           .col-12.col-sm-6.col-lg-4
-            +eventCard_1
+            +eventCard_1(9)
           .col-12.col-sm-6.col-lg-4
-            +eventCard_4
+            +eventCard_4(10)
