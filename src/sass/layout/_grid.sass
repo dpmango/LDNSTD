@@ -45,9 +45,14 @@
       //   padding-left: 0
       //   padding-right: 0
 
++rmin(1320)
+  .container-l
+    &__inner
+      margin-left: calc(((100vw - 1280px) / 2) - 40px)
+
 +rmin(1440)
   .container-l
     // padding-left: calc(((100vw - 1440px) / 2) + 75px)
     &__inner
-      margin-left: calc((100vw - 1440px) / 2)
+      margin-left: calc((100vw - 1439px) / 2)
       // margin-right: calc(100vh - 1440px)
