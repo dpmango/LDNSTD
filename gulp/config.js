@@ -32,13 +32,13 @@ const config = {
   dest: {
     root: destPath,
     html: destPath,
-    css: destPath + '/css',
-    js: destPath + '/js',
-    img: destPath + '/img',
-    fonts: destPath + '/fonts',
-    video: destPath + '/video',
-    php: destPath + '/php',
-    json: destPath + '/json',
+    css: destPath + '/site/css',
+    js: destPath + '/site/js',
+    img: destPath + '/site/img',
+    fonts: destPath + '/site/fonts',
+    video: destPath + '/site/video',
+    php: destPath + '/site/php',
+    json: destPath + '/site/json',
   },
 
   setEnv: function(env) {
