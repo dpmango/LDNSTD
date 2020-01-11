@@ -115,3 +115,14 @@
     &__description
       font-size: 15px
       margin: 10px 0 20px
+
+
+// IE FIXES
+.is-ie
+  .visit
+    &__content
+      height: 800px
+      +r($lg)
+        height: 500px
+      +r($sm)
+        height: 300px

@@ -39,6 +39,11 @@
           nextEl: '.swiper-next',
           prevEl: '.swiper-prev',
         },
+        on: {
+          init: function() {
+            APP.Plugins.LegacySupport.fixImages();
+          },
+        },
       });
 
       // SWIPER ADD VISIT
@@ -57,6 +62,11 @@
           nextEl: '.swiper-next',
           prevEl: '.swiper-prev',
         },
+        on: {
+          init: function() {
+            APP.Plugins.LegacySupport.fixImages();
+          },
+        },
       });
 
       // SWIPER ARTICLE
@@ -70,6 +80,11 @@
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
+        },
+        on: {
+          init: function() {
+            APP.Plugins.LegacySupport.fixImages();
+          },
         },
       });
 
@@ -100,6 +115,11 @@
         navigation: {
           nextEl: '.swiper-next',
           prevEl: '.swiper-prev',
+        },
+        on: {
+          init: function() {
+            APP.Plugins.LegacySupport.fixImages();
+          },
         },
       });
     },

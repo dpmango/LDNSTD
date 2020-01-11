@@ -118,6 +118,8 @@
     min-height: 600px
     color: white
   &__content-wrapper
+    min-width: 1px
+    min-height: 0
     position: relative
     padding: 0 45px
     &::before
@@ -193,6 +195,17 @@
       min-width: 50%
       padding: 21px 15px
       font-size: 15px
+
+// IE FIXES
+.is-ie
+  .event
+    &__content
+      height: 600px
+      +r($lg)
+        height: 460px
+      +r($sm)
+        min-height: 380px
+
 
 // EVENT CARD DATE
 .event-card-date
