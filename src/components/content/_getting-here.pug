@@ -18,13 +18,21 @@
 
       .content__accardeon
         .accardeon.js-content-accardeon
-          each element in [1,2,3,4,5]
+          -
+            var list = [
+              {icon: 'transport-taxi', name: 'By Taxi'},
+              {icon: 'transport-car', name: 'By Car'},
+              {icon: 'transport-bus', name: 'By Bus'},
+              {icon: 'transport-bike', name: 'By Bike'},
+              {icon: 'transport-airplane', name: 'By AirPlane'},
+            ]
+          each element in list
             // accardeon__element
             .accardeon__element(data-aos="fade-up")
               .accardeon__toggler
                 .accardeon__icon
-                  +svgMono('train')
-                .accardeon__title By Tube and Train
+                  +svgMono(element.icon)
+                .accardeon__title= element.name
 
               .accardeon__content
                 .row

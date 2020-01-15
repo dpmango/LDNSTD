@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="790px" height="597px" viewBox="0 0 790 597" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>transport-car</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="transport-car" fill="#000000">
+            <path d="M131,203 C147,168 162,132 182,92 C193,73 205,56 227,54 L564,54 C586,56 598,73 609,92 C629,132 644,168 660,203 L131,203 Z M289,347 L501,347 C514,347 524,358 524,371 C524,383 514,394 501,394 L289,394 C277,394 266,383 266,371 C266,358 277,347 289,347 Z M227,0 C191,0 169,13 139,55 L89,168 L13,168 C1,168 -21,230 59,232 L32,297 C33,380 33,462 33,544 C33,561 47,575 64,575 L168,575 C185,575 198,561 198,544 L198,476 L592,476 L592,544 C592,561 606,575 623,575 L727,575 C744,575 757,561 757,544 C757,462 758,380 758,297 L731,232 C812,230 789,168 778,168 L702,168 L652,55 C622,13 600,0 564,0 L227,0 Z M645,303 C618,303 595,325 595,353 C595,380 618,403 645,403 C673,403 695,380 695,353 C695,325 673,303 645,303 Z M146,303 C173,303 196,325 196,353 C196,380 173,403 146,403 C118,403 96,380 96,353 C96,325 118,303 146,303 Z" id="Shape"></path>
+            <text id="Created-by-Cho-Nix" font-family="Helvetica-Bold, Helvetica" font-size="5" font-weight="bold">
+                <tspan x="1" y="590">Created by Cho Nix</tspan>
+            </text>
+            <text id="from-the-Noun-Project" font-family="Helvetica-Bold, Helvetica" font-size="5" font-weight="bold">
+                <tspan x="1" y="595">from the Noun Project</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
