@@ -68,11 +68,31 @@
     color: $colorBlue
     font-weight: 800
 
-  blockquote
+  p.lead
     margin: 1.65em 0
     font-size: 23px
     line-height: 1.43
     font-weight: 600
+
+  blockquote
+    position: relative
+    margin: 1.65em 0
+    padding-bottom: 35px
+    color: $colorCyan
+    font-size: 23px
+    font-weight: 600
+    line-height: 1.42
+    max-width: 280px
+    &::after
+      display: inline-block
+      content: ' '
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 80px
+      height: 4px
+      background: $colorCyan
+
   ul
     list-style: none
     margin: 1.65em 0
@@ -95,15 +115,21 @@
     &:first-child
       margin-top: 0
 
-  p + p, blockquote + p, p + blockquote
+  p + p, blockquote + p, p + blockquote, p + table, blockquote + table
     margin-top: 1.65em
   p
     ul
       margin-top: 0
 
-+r($sm)
++r($lg)
   .wysiwyg
     blockquote
+      padding-bottom: 15px
+      font-size: 19px
+
++r($sm)
+  .wysiwyg
+    p.lead
       font-size: 19px
     p
       font-size: 15px
@@ -112,7 +138,10 @@
         font-size: 15px
     h3
       font-size: 19px
-
+    blockquote
+      max-width: 240px
+      padding-bottom: 20px
+      font-size: 19px
 
 // content tabs
 .content-tabs
