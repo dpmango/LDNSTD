@@ -37,12 +37,21 @@
         var wWidth = window.innerWidth;
         $images.each(function(i, img) {
           var $img = $(img);
-          var mobileAr = $img.data('ar-768');
+          var mobileAr = $img.data('ar-576');
+          var tabletAr = $img.data('ar-768');
           var desktopAr = $img.data('ar-desktop');
 
           if (mobileAr) {
-            if (wWidth < 768) {
+            if (wWidth < 576) {
               $img.css({ 'padding-bottom': APP.Plugins.ScalerMobile.setAr(mobileAr) });
+            } else {
+              $img.css({ 'padding-bottom': APP.Plugins.ScalerMobile.setAr(desktopAr) });
+            }
+          }
+
+          if (tabletAr) {
+            if (wWidth < 768) {
+              $img.css({ 'padding-bottom': APP.Plugins.ScalerMobile.setAr(tabletAr) });
             } else {
               $img.css({ 'padding-bottom': APP.Plugins.ScalerMobile.setAr(desktopAr) });
             }

@@ -23,8 +23,18 @@
                   // news card
                   a(href="#").news-card.news-card--slide
                     .news-card__image
-                      .scaler(style="padding-bottom: "+ (251/370) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_1.jpg)")
-                        img(js-lazy data-src='site/img/event_card_1.jpg' data-srcset='site/img/event_card_1@2x.jpg 2x')
+                      .scaler(js-scaler-mobile data-ar-576="345/690" style="padding-bottom: "+ (251/370) * 100 +"%; background-image: url(https://res.cloudinary.com/dqruxbmfq/image/upload/w_128,c_fill,e_blur:400/v1576427827/LDNSTD/event_card_1.jpg)")
+                        //- img(js-lazy data-src='site/img/event_card_1.jpg' data-srcset='site/img/event_card_1@2x.jpg 2x')
+                        picture(
+                          js-lazy
+                          alt=""
+                          data-src='site/img/event_card_1.jpg')
+                          data-src(
+                          media="(min-width: 576px)"
+                          srcset='site/img/event_card_1@2x.jpg 1x, site/img/event_card_1@2x.jpg 2x')
+                          data-src(
+                          media="(min-width: 0px)"
+                          srcset='https://res.cloudinary.com/dqruxbmfq/image/upload/w_690,h_345,c_fill,e_blackwhite/v1576427827/LDNSTD/event_card_1.jpg')
                     .news-card__content(data-aos="fade")
                       .news-card__tag Sports
                       .news-card__timestamp 30 November 2019
