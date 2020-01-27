@@ -63,13 +63,17 @@
           var $newPage = $(this.newContainer);
           var deferred = Barba.Utils.deferred();
 
-          TweenLite.to($oldPage, 0.5, {
-            opacity: 0,
-            ease: Power1.easeIn,
-            onComplete: function() {
-              deferred.resolve();
-            },
+          $oldPage.animate({ opacity: 0 }, 500, function() {
+            deferred.resolve();
           });
+
+          // TweenLite.to($oldPage, 0.5, {
+          //   opacity: 0,
+          //   ease: Power1.easeIn,
+          //   onComplete: function() {
+          //     deferred.resolve();
+          //   },
+          // });
 
           return deferred.promise;
         },
@@ -86,18 +90,24 @@
             opacity: 0,
           });
 
-          TweenLite.to(window, 0.15, {
-            scrollTo: { y: 0, autoKill: false },
-            ease: easingSwing,
+          $('body, html').animate({ scrollTop: 0 }, 150);
+
+          $newPage.animate({ opacity: 1 }, 500, function() {
+            _this.done();
           });
 
-          TweenLite.to($newPage, 0.5, {
-            opacity: 1,
-            ease: Power1.easeOut,
-            onComplete: function() {
-              _this.done();
-            },
-          });
+          // TweenLite.to(window, 0.15, {
+          //   scrollTo: { y: 0, autoKill: false },
+          //   ease: easingSwing,
+          // });
+
+          // TweenLite.to($newPage, 0.5, {
+          //   opacity: 1,
+          //   ease: Power1.easeOut,
+          //   onComplete: function() {
+          //     _this.done();
+          //   },
+          // });
         },
       }),
     },
