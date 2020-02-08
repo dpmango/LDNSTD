@@ -22,7 +22,7 @@ include ../../pug/schema/_mixins
 
       .content__wrapper
         .row
-          .col-12.col-md-7.col-lg-6
+          .col-12
             .article__timestamp(data-aos="fade-up" itemprop="datePublished" content="2020-11-30T09:08:30+00:00") Friday – 8:30pm <br/>30 November 2019
             h1.article__title(data-aos="fade-up" itemprop="name") West Ham v <br/>Tottenham Hotspur
 
@@ -31,7 +31,8 @@ include ../../pug/schema/_mixins
             .col-12.col-md-10.col-lg-6
               .article__text(data-aos="fade-up")
                 .wysiwyg(itemprop="about description")
-                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  each p in [1,2,3,4,5]
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               div(data-teleport-target="article-buy-btn")
               div(data-teleport-target="article-prices")
 
@@ -80,25 +81,25 @@ include ../../pug/schema/_mixins
                         span Google
 
             .col-12.col-lg-6.col-xl-5.offset-xl-1(js-teleport data-teleport-to="article-prices" data-teleport-condition="<992")
-              .article__prices(data-aos="fade-up")
-                .prices-art.prices-art--bg-red
+              .article__prices.js-sticky(data-aos="fade-up")
+                a(href="#").prices-art.prices-art--bg-red
                   .prices-art__content
                     .prices-art__title Final few seats
                   .prices-art__right.prices-art__right--iconed
                     +svgMono('seats2')
-                .prices-art.prices-art--bg-cyan
+                a(href="#").prices-art.prices-art--bg-cyan
                   .prices-art__content
                     .prices-art__title The Market
                     .prices-art__description VIP Upgrade
                   .prices-art__right
                     .prices-art__price FROM <span>£145</span>
-                .prices-art
+                a(href="#").prices-art
                   .prices-art__content
                     .prices-art__title Royal East Lounge
                     .prices-art__description Premium Hospitality
                   .prices-art__right
                     .prices-art__price FROM <span>£259</span>
-                .prices-art
+                a(href="#").prices-art
                   .prices-art__content
                     .prices-art__title Executive box
                     .prices-art__description Premium Hospitality

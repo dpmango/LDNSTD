@@ -56,6 +56,16 @@
       font-size: 33px
       font-weight: 700
 
+a.prices-art
+  transition: background .25s $ease
+  &:hover
+    background: darken($colorGrayBG, 10%)
+  &--bg-red
+    &:hover
+      background: darken($colorRed, 10%)
+  &--bg-cyan
+    &:hover
+      background: darken($colorCyan, 5%)
 
 +r($xl)
   .prices-art

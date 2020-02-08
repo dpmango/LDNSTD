@@ -18,7 +18,7 @@
         var $sticky = $(sticky);
         var dataOffsetTop = $sticky.data('offset-top')
           ? parseInt($sticky.data('offset-top'), 10)
-          : 0;
+          : 90;
 
         $sticky.stick_in_parent({
           // eslint-disable-next-line camelcase
