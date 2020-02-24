@@ -1,0 +1,29 @@
+ProjectTitle: LDNSTD
+
+PageList:
+  - file: homepage.html
+    ready: 100
+  - file: homepage-whitenav.html
+    ready: 100
+  - file: whatson.html
+    ready: 100
+  - file: event.html
+    ready: 100
+  - file: event-2.html
+    ready: 100
+  - file: news.html
+    ready: 100
+  - file: article.html
+    ready: 100
+  - file: getting-here.html
+    ready: 100
+  - file: eat-drink.html
+    ready: 100
+  - file: match-day.html
+    ready: 100
+  - file: book-tour.html
+    ready: 100
+  - file: functions.html
+    ready: 100
+  - file: ui.html
+    ready: 10
